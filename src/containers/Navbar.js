@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import Icon from "../images/icon.svg";
 
 class Navbar extends Component {
 	render(){
@@ -8,17 +9,17 @@ class Navbar extends Component {
 			<nav className="navbar navbar-expand">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
-						Link
+						<img src={Icon} alt="flaticon.com/authors/freepik"/>
 					</Link>
+					<ul className="nav navbar-nav navbar-right">
+						<li>
+							<Link to="/signup">Sign up</Link>
+						</li>
+						<li>
+							<Link to="/login">Log in</Link>
+						</li>
+					</ul>
 				</div>
-				<ul className="nav navbar-nav navbar-right">
-					<li>
-						<Link to="/signup">Sign up</Link>
-					</li>
-					<li>
-						<Link to="/login">Log in</Link>
-					</li>
-				</ul>
 			</nav>
 		);
 	}
