@@ -3,8 +3,10 @@ import { Switch, Route, withRouter, Redirect } from "react-router";
 import { connect } from "react-redux";
 import Homepage from "../components/Homepage";
 import Authform from "../components/Authform";
+import { authUser } from "../store/actions/auth";
 
 const Main = props => {
+	const {authUser}=props;
 	return (
 		<div className="container">
 			<Switch>
@@ -12,10 +14,10 @@ const Main = props => {
 					props => <Homepage {...props}/>
 				} />
 				<Route exact path="/login" render={
-					props => <Authform buttonText="Log in" heading="Welcome Back" {...props}/>
+					props => <Authform onAuth={authUser} buttonText="Log in" heading="Welcome Back" {...props}/>
 				} />
 				<Route exact path="/signup" render={
-					props => <Authform buttonText="Sign me up!" heading="Join Warbler" {...props}/>
+					props => <Authform onAuth={authUser} signUp buttonText="Sign me up!" heading="Join Warbler" {...props}/>
 				} />
 			</Switch>
 		</div>
@@ -28,4 +30,4 @@ function mapStateToProps(state){
 	}
 }
 
-export default withRouter(connect(mapStateToProps, null)(Main));
+export default withRouter(connect(mapStateToProps, { authUser })(Main));
