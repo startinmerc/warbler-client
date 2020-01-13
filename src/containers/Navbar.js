@@ -10,6 +10,7 @@ class Navbar extends Component {
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
 						<img src={Icon} alt="flaticon.com/authors/freepik"/>
+						Warbler
 					</Link>
 					<ul className="nav navbar-nav navbar-right">
 						<li>
