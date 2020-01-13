@@ -11,7 +11,7 @@ const Main = props => {
 				<Route exact path="/" render={
 					props => <Homepage {...props}/>
 				} />
-				<Route exact path="/signin" render={
+				<Route exact path="/login" render={
 					props => <Authform buttonText="Log in" heading="Welcome Back" {...props}/>
 				} />
 				<Route exact path="/signup" render={
