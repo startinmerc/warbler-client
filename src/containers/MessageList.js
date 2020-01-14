@@ -18,7 +18,15 @@ class MessageList extends Component {
 				profileImageUrl={m.user.profileImageUrl}
 			/>
 			));
-		return messageList;
+		return (
+			<div className="row col-8">
+				<div className="offset-1 col-10">
+					<ul className="list-group" id="messages">
+						{messageList}
+					</ul>
+				</div>
+			</div>
+		);
 	}
 }
 
