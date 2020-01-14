@@ -21,7 +21,7 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			</span>
 			<p>{text}</p>
 			{isCorrectUser &&
-				(<a className="btn btn-danger" onClick={removeMessage}>
+				(<a className="btn btn-danger message--delete-btn" onClick={removeMessage}>
 					Delete Message
 				</a>)
 			}
