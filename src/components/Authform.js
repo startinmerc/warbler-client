@@ -19,7 +19,7 @@ class Authform extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		const authType = this.props.signUp ? "signup" : "login";
+		const authType = this.props.signUp ? "signup" : "signin";
 		this.props.onAuth(authType, this.state).then(()=>{
 			console.log("logged in!");
 		}).catch(()=>{
@@ -42,14 +42,15 @@ class Authform extends Component {
 							 />
 							<label htmlFor="password">Password:</label>
 							<input className="form-control" id="password" name="password"
-							 onChange={this.handleChange} type="password"
+							 onChange={this.handleChange} type="password" value={password}
 							 />
 							{signUp && (
 								<div>
 									<label htmlFor="username">Username:</label>
 									<input className="form-control" id="username" name="username"
 									 onChange={this.handleChange} value={username} type="text"
-									 /><label htmlFor="profileImageUrl">Image URL:</label>
+									 />
+									<label htmlFor="profileImageUrl">Image URL:</label>
 									<input className="form-control" id="profileImageUrl" name="profileImageUrl"
 									 onChange={this.handleChange} value={profileImageUrl} type="text"
 									 />

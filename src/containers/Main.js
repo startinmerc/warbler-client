@@ -13,8 +13,8 @@ const Main = props => {
 				<Route exact path="/" render={
 					props => <Homepage {...props}/>
 				} />
-				<Route exact path="/login" render={
-					props => <Authform onAuth={authUser} buttonText="Log in" heading="Welcome Back" {...props}/>
+				<Route exact path="/signin" render={
+					props => <Authform onAuth={authUser} buttonText="Sign in" heading="Welcome Back" {...props}/>
 				} />
 				<Route exact path="/signup" render={
 					props => <Authform onAuth={authUser} signUp buttonText="Sign me up!" heading="Join Warbler" {...props}/>
