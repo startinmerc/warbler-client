@@ -9,6 +9,7 @@ const UserAside = ({profileImageUrl, username}) => (
 					alt={username} className="img-thumbnail"
 					style={{width:"200px", height:"200px"}}
 				/>
+				<p>{username}</p>
 			</div>
 		</div>
 	</aside>
