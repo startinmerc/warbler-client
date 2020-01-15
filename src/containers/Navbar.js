@@ -20,9 +20,9 @@ class Navbar extends Component {
 						Warbler
 					</Link>
 					{this.props.currentUser.isAuthenticated ? (
-						<ul className="nav navbar-nav navbar-right">
+						<ul className="nav navbar-nav navbar-right d-flex align-items-center">
 							<li>
-								<Link to={`/users/${this.props.currentUser.user.id}/messages/new`}>
+								<Link className="btn btn-success" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
 									New Message
 								</Link>
 							</li>

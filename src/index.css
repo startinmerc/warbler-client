@@ -22,26 +22,29 @@ body {
 }
 
 .navbar a {
-	font-weight: bold;
-	color: #f9f9f9;
+	color: var(--color1);
 }
 
 .navbar a:hover {
-	text-decoration: underline;
 	cursor: pointer;
 }
 
-.navbar-brand > img {
+.navbar-brand img {
 	display: inline-block;
-	width: 50px;
+	width: 3.5rem;
 	margin-right: 8px;
+	color: var(--color1);
+}
+
+.navbar-brand {
+	font-size: 2rem;
 }
 
 ul.nav.navbar-nav li {
 	margin: 0 0.5rem;
 }
 
-.onboarding > .navbar {
+.navbar {
 	background-image: linear-gradient(90deg, var(--color3), var(--color4));
 }
 
