@@ -21,7 +21,7 @@ class MessageList extends Component {
 			/>
 			));
 		return (
-			<ul className="list-group col-8" id="messages">
+			<ul className="list-group col-9" id="messages">
 				{messageList}
 			</ul>
 		);
