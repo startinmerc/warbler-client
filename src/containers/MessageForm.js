@@ -19,24 +19,31 @@ class MessageForm extends React.Component {
 
 	render(){
 		return(
-			<form onSubmit={this.handleNewMessage}>
+			<form onSubmit={this.handleNewMessage} className="new-message-form">
 				{this.props.errors.message && (
 					<div className="alert alert-danger">
 						{this.props.errors.message}
 					</div>
 				)}
-				<label htmlFor="message">
-					New Message:
-				</label>
-				<input 
-					type="text" 
-					className="form-control"
-					value={this.state.message}
-					id="message"
-					name="message"
-					onChange={e => this.setState({message: e.target.value})}
-				/>
-				<button type="submit" className="btn btn-success">
+				<div className="form-group">
+					<label htmlFor="message">
+						New Message:
+					</label>
+					<input 
+						autoFocus
+						maxLength="160"
+						type="text" 
+						className="form-control"
+						value={this.state.message}
+						id="message"
+						name="message"
+						onChange={e => this.setState({message: e.target.value})}
+					/>
+					<small className="form-text text-muted">
+						{this.state.message.length}/160
+					</small>
+				</div>
+				<button type="submit" className="btn btn-success btn-block">
 					Submit Message
 				</button>
 			</form>
