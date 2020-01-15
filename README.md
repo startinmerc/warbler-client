@@ -1,10 +1,24 @@
+# Warbler
+
+## A full-stack twitter clone
+
+Built on:
+* Mongo
+* Express
+* React
+* Node
+* Redux
+* React-DOM
+* Axios
+* JWT
+* Moment
+* Dotenv
+* Body-Parser
+* BCrypt
+
 Todo:
 
-clear errors
 decent styling
 	svg background/fill (make component?)
 	homepage background to gradient
-	nav links
-	empty a's
-	delete button as x in message
 	
