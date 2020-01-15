@@ -2,17 +2,16 @@ import React from "react";
 import DefaultUserImg from "../images/icon.svg";
 
 const UserAside = ({profileImageUrl, username}) => (
-	<aside className="col-2">
-		<div className="panel panel-default">
-			<div className="panel-body">
-				<img src={profileImageUrl || DefaultUserImg} 
-					alt={username} className="img-thumbnail"
-					style={{width:"200px", height:"200px"}}
-				/>
-				<p>{username}</p>
+	<div className="col-2">
+		<div className="card useraside-card">
+			<img src={profileImageUrl || DefaultUserImg} 
+				alt={username} className="card-img-top"
+			/>
+			<div className="card-body">
+				<h5>@{username}</h5>
 			</div>
 		</div>
-	</aside>
+	</div>
 );
 
 export default UserAside;

@@ -89,3 +89,11 @@ ul.nav.navbar-nav li {
 .list-group-item:hover .message--delete-btn {
 	opacity: 0.7;
 }
+
+.useraside-card {
+	background-color: var(--color3);
+}
+
+.useraside-card .card-img-top {
+	background-color: var(--color2);
+}
