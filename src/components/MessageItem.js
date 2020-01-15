@@ -5,26 +5,20 @@ import DefaultProfileImg from "../images/icon.svg";
 import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser}) => (
-	<li className="list-group-item d-flex">
+	<li className="list-group-item d-flex message-item">
 		<img src={ profileImageUrl || DefaultProfileImg }
 			alt={username}
-			height="100px"
-			width="100px"
-			className="timeline-image"
-			style={{backgroundColor: "var(--color2)"}}
+			className="message-item--image img-fluid"
 		/>
 		<div className="ml-2">
 			<Link to={`/users/${username}`}>@{username}</Link>
-			<span className="text-muted">
-				<Moment className="text-muted" format="DD MM YY">
-					{date}
-				</Moment>
-			</span>
+			<Moment className="text-muted ml-2" fromNow>
+				{date}
+			</Moment>
 			<p>{text}</p>
-			
 		</div>
 		{isCorrectUser &&
-				(<button className="btn message--delete-btn" onClick={removeMessage}>
+				(<button className="btn message-item--delete-btn" onClick={removeMessage}>
 					<Cross size="20" />
 				</button>)
 			}

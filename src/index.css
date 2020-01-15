@@ -2,6 +2,7 @@
 	--color1: #ECF8F8;
 	--color2: #EEE4E1;
 	--color3: #E7D8C9;
+	--color3t: #E7D8C999;
 	--color4: #E6BEAE;
 	--color5: #B2967D;
 }
@@ -61,11 +62,21 @@ ul.nav.navbar-nav li {
 	text-shadow: 0 0 5px #090909;
 }
 
-.list-group-item {
+.message-item:nth-of-type(odd) {
 	background-color: var(--color3);
 }
 
-.message--delete-btn {
+.message-item:nth-of-type(even) {
+	background-color: var(--color3t);
+}
+
+.message-item--image {
+	background-color: var(--color2);
+	height: 100px;
+	width: 100px;
+}
+
+.message-item--delete-btn {
 	opacity: 0;
 	transition: opacity 120ms ease-in;
 	background-color: var(--danger);
@@ -77,16 +88,16 @@ ul.nav.navbar-nav li {
 	right: 0.75rem;
 }
 
-.message--delete-btn:hover {
+.message-item--delete-btn:hover {
 	opacity: 1;
 }
 
-.message--delete-btn svg {
+.message-item--delete-btn svg {
 	margin-top: -3px;
 	stroke: white;
 }
 
-.list-group-item:hover .message--delete-btn {
+.list-group-item:hover .message-item--delete-btn {
 	opacity: 0.7;
 }
 
