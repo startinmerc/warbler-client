@@ -5,14 +5,14 @@ import Icon from "../images/Icon";
 import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser}) => (
-	<li className="list-group-item d-flex message-item">
+	<li className="list-group-item d-flex message-item p-3">
 		{profileImageUrl ? (
 			<img src={profileImageUrl}
 				alt={username}
 				className="message-item--image img-fluid"
 			/>
 			) : (
-				<Icon className="message-item--image" size="100"/>
+				<Icon classes="message-item--image" size="100"/>
 			)
 		}
 		<div className="ml-2">
