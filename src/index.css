@@ -7,8 +7,19 @@
 	--color5: #B2967D;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background-color: var(--color2);
+	height: 100%;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 }
 
 .btn:hover, .btn:focus {
@@ -116,4 +127,5 @@ ul.nav.navbar-nav li {
 
 footer {
 	background-color: var(--color5);
+	margin-top: auto;
 }

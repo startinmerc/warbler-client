@@ -11,7 +11,7 @@ import MessageForm from "../containers/MessageForm";
 const Main = props => {
 	const { authUser, errors, removeError, currentUser } = props;
 	return (
-		<div className="container">
+		<div className="container mb-3">
 			<Switch>
 				<Route exact path="/" render={
 					props => <Homepage currentUser={currentUser} {...props}/>
