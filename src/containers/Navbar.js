@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import Icon from "../images/icon.svg";
+import Icon from "../images/Icon";
 import { logOut } from "../store/actions/auth";
 
 class Navbar extends Component {
@@ -16,8 +16,7 @@ class Navbar extends Component {
 			<nav className="navbar navbar-expand">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
-						<img src={Icon} alt="flaticon.com/authors/freepik"/>
-						Warbler
+						<Icon color="var(--color1)"/>
 					</Link>
 					{this.props.currentUser.isAuthenticated ? (
 						<ul className="nav navbar-nav navbar-right d-flex align-items-center">

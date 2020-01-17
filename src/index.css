@@ -29,15 +29,17 @@ body {
 	cursor: pointer;
 }
 
-.navbar-brand img {
-	display: inline-block;
-	width: 3.5rem;
-	margin-right: 8px;
-	color: var(--color1);
+.navbar-brand {
+	padding: 5px;
+	border-radius: 50%;
 }
 
-.navbar-brand {
-	font-size: 2rem;
+.navbar-brand:hover {
+	background-color: var(--color3);
+}
+
+.navbar-brand:hover svg {
+	fill: black;
 }
 
 ul.nav.navbar-nav li {
@@ -45,7 +47,7 @@ ul.nav.navbar-nav li {
 }
 
 .navbar {
-	background-image: linear-gradient(90deg, var(--color3), var(--color4));
+	background-color: var(--color4);
 }
 
 /*Homepage*/
