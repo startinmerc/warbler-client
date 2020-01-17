@@ -111,3 +111,7 @@ ul.nav.navbar-nav li {
 .useraside-card .card-img-top {
 	background-color: var(--color2);
 }
+
+footer {
+	background-color: var(--color5);
+}
