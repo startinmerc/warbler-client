@@ -78,6 +78,10 @@ ul.nav.navbar-nav li {
 	text-shadow: 0 0 5px #090909;
 }
 
+#messages {
+	padding-left: 15px;
+}
+
 .message-item:nth-of-type(odd) {
 	background-color: var(--color3);
 }
