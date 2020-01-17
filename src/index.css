@@ -75,12 +75,6 @@ ul.nav.navbar-nav li {
 	background-color: var(--color3t);
 }
 
-.message-item--image {
-	background-color: var(--color2);
-	height: 100px;
-	width: 100px;
-}
-
 .message-item--delete-btn {
 	opacity: 0;
 	transition: opacity 120ms ease-in;

@@ -1,15 +1,20 @@
 import React from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
-import DefaultProfileImg from "../images/icon.svg";
+import Icon from "../images/Icon";
 import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser}) => (
 	<li className="list-group-item d-flex message-item">
-		<img src={ profileImageUrl || DefaultProfileImg }
-			alt={username}
-			className="message-item--image img-fluid"
-		/>
+		{profileImageUrl ? (
+			<img src={profileImageUrl}
+				alt={username}
+				className="message-item--image img-fluid"
+			/>
+			) : (
+				<Icon className="message-item--image" size="100"/>
+			)
+		}
 		<div className="ml-2">
 			<Link to={`/users/${username}`}>@{username}</Link>
 			<Moment className="text-muted ml-2" fromNow>
