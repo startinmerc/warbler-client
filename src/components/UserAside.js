@@ -1,12 +1,19 @@
 import React from "react";
-import DefaultUserImg from "../images/icon.svg";
+import Icon from "../images/Icon";
 
 const UserAside = ({profileImageUrl, username}) => (
 	<div className="col-3">
 		<div className="card useraside-card">
-			<img src={profileImageUrl || DefaultUserImg} 
+		{profileImageUrl ? (
+			<img src={profileImageUrl} 
 				alt={username} className="card-img-top"
 			/>
+		) : (
+			<div className="card-img-top">
+				<Icon size="100%"/>
+			</div>
+		)}
+			
 			<div className="card-body">
 				<h5>@{username}</h5>
 			</div>
