@@ -11,26 +11,36 @@ class Authform extends Component {
 		};
 	}
 
+	// Update state on form input change
 	handleChange = (e) => {
 		this.setState({
 			[e.target.name]: e.target.value
 		});
 	};
 
+	// Handle form submit
 	handleSubmit = (e) => {
+		// Prevent page refresh
 		e.preventDefault();
+		// Find type of submit to send
 		const authType = this.props.signUp ? "signup" : "signin";
+		// Dispatch API call via Redux
 		this.props.onAuth(authType, this.state).then(()=>{
+			// Redirect to homepage
 			this.props.history.push("/");
+		// Catch errors
 		}).catch(()=>{
 			return;
 		});
 	};
 
 	render(){
+		// Deconstruct input fields from state
 		const { email, username, password, profileImageUrl } = this.state;
+		// Deconstruct props, including redux state
 		const { heading, buttonText, signUp, errors, history, removeError } = this.props;
 		
+		// Clear errors
 		history.listen(()=>{
 			removeError();
 		});
@@ -40,6 +50,7 @@ class Authform extends Component {
 				<div className="col-12 col-md-6">
 					<form onSubmit={this.handleSubmit}>
 						<h2>{heading}</h2>
+						{/* Show any errors */}
 						{errors.message && 
 							<div className="alert alert-danger">
 								{errors.message}
@@ -53,6 +64,7 @@ class Authform extends Component {
 						<input className="form-control" id="password" name="password"
 						 onChange={this.handleChange} type="password" value={password}
 						 />
+						{/* Show extra fields for signup form */}
 						{signUp && (
 							<div>
 								<label htmlFor="username">Username:</label>

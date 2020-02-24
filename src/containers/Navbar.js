@@ -18,6 +18,7 @@ class Navbar extends Component {
 					<Link to="/" className="navbar-brand">
 						<Icon color="var(--color1)"/>
 					</Link>
+					{/*Only show messages, user card if logged in*/}
 					{this.props.currentUser.isAuthenticated ? (
 						<ul className="nav navbar-nav navbar-right d-flex align-items-center">
 							<li>
@@ -31,6 +32,7 @@ class Navbar extends Component {
 								</button>
 							</li>
 						</ul>
+					{/*Otherwise show default landing page*/}
 						) : (
 					<ul className="nav navbar-nav navbar-right">
 						<li>
