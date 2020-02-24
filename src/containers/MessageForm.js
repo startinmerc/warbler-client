@@ -5,7 +5,7 @@ import { postNewMessage } from "../store/actions/messages";
 class MessageForm extends React.Component {
 
 	constructor(props){
-		super(props)
+		super(props);
 		this.state = {
 			message: ""
 		};
@@ -25,7 +25,7 @@ class MessageForm extends React.Component {
 
 	render(){
 		return(
-			<form onSubmit={this.handleNewMessage} className="new-message-form">
+			<form onSubmit={this.handleSubmit} className="new-message-form">
 
 				{/* Show any errors */}
 				{this.props.errors.message && (
