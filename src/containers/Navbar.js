@@ -32,8 +32,7 @@ class Navbar extends Component {
 								</button>
 							</li>
 						</ul>
-					{/*Otherwise show default landing page*/}
-						) : (
+					) : (
 					<ul className="nav navbar-nav navbar-right">
 						<li>
 							<Link to="/signup">Sign up</Link>
