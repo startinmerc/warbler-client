@@ -43,3 +43,14 @@ export const removeMessage = (user_id, message_id) => {
 			.catch(err => dispatch(addError(err.message)));
 	};
 };
+
+export const editMessage = (user_id, message_id, text) => {
+	return dispatch => {
+		// Send API call with path & new message text
+		return apiCall("put", `/api/users/${user_id}/messages/${message_id}`, { text })
+			// Then continue
+			.then(res => {})
+			// Catch errors
+			.catch(err => dispatch(addError(err.message)));
+	};
+};
