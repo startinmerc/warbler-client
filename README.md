@@ -164,15 +164,14 @@ Current features are user signup & signin, message creation and deletion, with f
 * Add column size breakpoints
 * Add display breakpoins
 
+#### Redux Pt.7
+* Edit action
+
 ---
 
 ### To Do:
 
-* Expand these docs!!!
-
-* Edit action
-* Edit reducer
-* Edit actionType
-
+* Add individual message route
+* Add edit message malarkey
 * Change new message page to populate with text if editing
 * Also change link to put request if editing
