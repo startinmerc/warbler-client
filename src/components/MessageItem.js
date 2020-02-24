@@ -9,10 +9,10 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 		{profileImageUrl ? (
 			<img src={profileImageUrl}
 				alt={username}
-				className="message-item--image img-fluid"
+				className="message-item__image img-fluid"
 			/>
 			) : (
-				<Icon classes="message-item--image" size="100"/>
+				<Icon classes="message-item__image" size="100"/>
 			)
 		}
 		<div className="ml-2">
@@ -22,11 +22,12 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			</Moment>
 			<p>{text}</p>
 		</div>
-		{isCorrectUser &&
-				(<button className="btn message-item--delete-btn" onClick={removeMessage}>
-					<Cross size="20" />
-				</button>)
-			}
+		{isCorrectUser && (
+			<button className="btn message-item__btn message-item__btn--delete" onClick={removeMessage}>
+				<Cross size="20" />
+			</button>
+		)}
 	</li>
-)
+);
+
 export default MessageItem;
