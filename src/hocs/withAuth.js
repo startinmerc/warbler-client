@@ -2,7 +2,7 @@
 import React, {Component} from "react";
 import { connect } from "react-redux";
 
-export default function withAuth(ComponentToBeRendered){
+export default function withAuth(ComponentToBeRendered, passedProps){
 	class Authenticate extends Component {
 		// checks when loaded if state.currentUser.isAuthenticated
 		UNSAFE_componentWillMount(){
@@ -18,7 +18,7 @@ export default function withAuth(ComponentToBeRendered){
 		}
 		render(){
 			// render component with its relevant props if sucessful
-			return <ComponentToBeRendered {...this.props} />
+			return <ComponentToBeRendered {...this.props} {...passedProps}/>
 		}
 	}
 
