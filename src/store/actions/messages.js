@@ -14,17 +14,25 @@ export const remove = id => ({
 
 export const fetchMessages = () => {
 	return dispatch => {
+		// Send API call to get all messages
 		return apiCall("get", "/api/messages")
+			// Then send loadMessages action
 			.then(res => dispatch(loadMessages(res)))
+			// Catch errors
 			.catch(err => dispatch(addError(err.message)));
 	};
 };
 
 export const postNewMessage = text => (dispatch, getState) => {
+	// Get currentUser from state
 	let { currentUser } = getState();
+	// Extract user id
 	const id = currentUser.user.id;
+	// Send API call to post new message
 	return apiCall("post", `/api/users/${id}/messages`, { text })
+		// Thenk continue
 		.then(res => {})
+		// Catch errors
 		.catch(err => dispatch(addError(err.message)));
 }
 

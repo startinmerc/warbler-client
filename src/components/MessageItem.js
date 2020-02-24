@@ -6,6 +6,7 @@ import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser}) => (
 	<li className="list-group-item d-flex message-item p-3">
+		{/* profile image or backup icon */}
 		{profileImageUrl ? (
 			<img src={profileImageUrl}
 				alt={username}
@@ -22,6 +23,7 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			</Moment>
 			<p>{text}</p>
 		</div>
+		{/* Show/hide remove messae button if author logged in */}
 		{isCorrectUser && (
 			<button className="btn message-item__btn message-item__btn--delete" onClick={removeMessage}>
 				<Cross size="20" />

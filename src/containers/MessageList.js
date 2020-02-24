@@ -4,11 +4,17 @@ import { fetchMessages, removeMessage } from "../store/actions/messages";
 import MessageItem from "../components/MessageItem";
 
 class MessageList extends Component {
+
+	// Only fetch messages if mounted
 	componentDidMount(){
 		this.props.fetchMessages();
 	}
+
 	render() {
+		// Extract variables from props
 		const { messages, removeMessage, currentUser } = this.props;
+
+		// Map all message components, including bound functions
 		let messageList = messages.map((m)=>(
 			<MessageItem
 				key={m._id}

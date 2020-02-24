@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MessageTimeline from "./MessageTimeline";
 
 const Homepage = ({ currentUser }) => {
+	// Render default landing page if not logged in, else MessageTimeline
 	if(!currentUser.isAuthenticated){
 		return (
 			<div className="home-hero d-flex flex-column justify-content-around align-items-center">

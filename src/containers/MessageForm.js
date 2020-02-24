@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { postNewMessage } from "../store/actions/messages";
 
 class MessageForm extends React.Component {
+
 	constructor(props){
 		super(props)
 		this.state = {
@@ -10,21 +11,29 @@ class MessageForm extends React.Component {
 		};
 	}
 
+	// Handle form submission if new message
 	handleNewMessage = e => {
+		// Stop page refresh
 		e.preventDefault();
+		// Send API call through Redux
 		this.props.postNewMessage(this.state.message);
+		// Clear message
 		this.setState({message:""});
+		// Redirect to homepage
 		this.props.history.push("/");
 	}
 
 	render(){
 		return(
 			<form onSubmit={this.handleNewMessage} className="new-message-form">
+
+				{/* Show any errors */}
 				{this.props.errors.message && (
 					<div className="alert alert-danger">
 						{this.props.errors.message}
 					</div>
 				)}
+				
 				<div className="form-group">
 					<label htmlFor="message">
 						New Message:
