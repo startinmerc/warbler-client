@@ -38,6 +38,21 @@ class MessageForm extends React.Component {
 		this.props.history.push("/");
 	}
 
+	handleEditMessage = e => {
+		// Stop page refresh
+		e.preventDefault();
+		// Send API call through Redux
+		this.props.editMessage(
+			this.props.location.pathname.split("/")[2],
+			this.props.location.pathname.split("/")[4],
+			this.state.message
+		);
+		// Clear message
+		this.setState({message:""});
+		// Redirect to homepage
+		this.props.history.push("/");
+	}
+
 	render(){
 		return(
 			<form onSubmit={this.handleSubmit} className="new-message-form">
