@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Icon from "../images/Icon";
 import Cross from "../images/Cross";
 
-const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser}) => (
+const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser, userId, msgId}) => (
 	<li className="list-group-item d-flex message-item p-3">
 		{/* profile image or backup icon */}
 		{profileImageUrl ? (
