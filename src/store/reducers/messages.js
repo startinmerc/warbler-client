@@ -1,9 +1,7 @@
-import { LOAD_ONE_MESSAGE, LOAD_MESSAGES, REMOVE_MESSAGE } from "../actionTypes";
+import { LOAD_MESSAGES, REMOVE_MESSAGE } from "../actionTypes";
 
 const messages = (state=[], action) => {
 	switch(action.type){
-		case LOAD_ONE_MESSAGE:
-			return {foundMessage: action.message}
 		case LOAD_MESSAGES:
 			return [...action.messages];
 		case REMOVE_MESSAGE:

@@ -1,29 +1,16 @@
 import { apiCall } from "../../services/api";
 import { addError } from "./errors";
-import { LOAD_MESSAGES, REMOVE_MESSAGE, LOAD_ONE_MESSAGE } from "../actionTypes";
+import { LOAD_MESSAGES, REMOVE_MESSAGE } from "../actionTypes";
 
 export const loadMessages = messages => ({
 	type: LOAD_MESSAGES,
 	messages
 });
 
-export const loadOneMessage = message => ({
-	type: LOAD_ONE_MESSAGE,
-	message
-});
-
 export const remove = id => ({
 	type: REMOVE_MESSAGE,
 	id
 });
-
-export const fetchOneMessage = (user_id, message_id) => {
-	return dispatch => {
-		return apiCall("get", `/api/users/${user_id}/messages/${message_id}`)
-			.then(res => dispatch(loadOneMessage(res)))
-			.catch(err => dispatch(addError(err.message)));
-	}
-}
 
 export const fetchMessages = () => {
 	return dispatch => {

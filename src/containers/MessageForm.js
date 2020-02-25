@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { postNewMessage, editMessage, fetchOneMessage } from "../store/actions/messages";
+import { postNewMessage, editMessage, fetchMessages } from "../store/actions/messages";
 
 class MessageForm extends React.Component {
 
@@ -12,12 +12,10 @@ class MessageForm extends React.Component {
 	}
 
 	async getMsgPop(){
-		await this.props.fetchOneMessage(
-			this.props.location.pathname.split("/")[2],
-			this.props.location.pathname.split("/")[4]
-		);
-		debugger
-		this.setState({message: this.props.foundMessage.text});
+		await this.props.fetchMessages();
+		const foundMessage = this.props.messages.find(
+			message => message._id === this.props.location.pathname.split("/")[4]);
+		this.setState({message: foundMessage.text});
 	}
 
 	componentDidMount(){
@@ -93,8 +91,8 @@ class MessageForm extends React.Component {
 function mapStateToProps(state){
 	return {
 		errors: state.errors,
-		foundMessage: state.messages.foundMessage
+		messages: state.messages
 	};
 }
 
-export default connect(mapStateToProps, { postNewMessage, fetchOneMessage, editMessage })(MessageForm);
+export default connect(mapStateToProps, { postNewMessage, editMessage, fetchMessages })(MessageForm);
