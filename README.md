@@ -180,5 +180,6 @@ Current features are user signup & signin, message creation and deletion, with f
 
 ### To Do:
 
-* Add individual message route
-* Also change link to put request if editing
+* Add isEdited to db.message, render in frontend
+* Add shape-outside to MessageItem to wrap user icon
+* Rebuild layout
