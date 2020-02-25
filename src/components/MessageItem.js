@@ -2,7 +2,6 @@ import React from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import Icon from "../images/Icon";
-import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser, userId, msgId}) => (
 	<li className="list-group-item message-item p-3">
@@ -23,7 +22,7 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			</Moment>
 			<p className="text-break">{text}</p>
 		</div>
-		{/* Show/hide remove messae button if author logged in */}
+		{/* Show/hide buttons if author logged in */}
 		{isCorrectUser && (
 			<div className="btn-container">
 				<Link to={`/users/${userId}/messages/${msgId}/edit`} 
