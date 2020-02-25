@@ -166,12 +166,12 @@ Current features are user signup & signin, message creation and deletion, with f
 
 #### Redux Pt.7
 * Edit action
+* Add getOneMessage const, handler, action
+* ...then realize I could just get all & find...
 
 ---
 
 ### To Do:
 
 * Add individual message route
-* Add edit message malarkey
-* Change new message page to populate with text if editing
 * Also change link to put request if editing
