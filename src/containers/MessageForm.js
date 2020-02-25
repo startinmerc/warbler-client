@@ -11,6 +11,14 @@ class MessageForm extends React.Component {
 		};
 	}
 
+	async getMsgPop(){
+		await this.props.fetchOneMessage(
+			this.props.location.pathname.split("/")[2],
+			this.props.location.pathname.split("/")[4]
+		);
+		debugger
+		this.setState({message: this.props.foundMessage.text});
+	}
 	// Handle form submission if new message
 	handleNewMessage = e => {
 		// Stop page refresh
