@@ -17,6 +17,14 @@ export const remove = id => ({
 	id
 });
 
+export const fetchOneMessage = (user_id, message_id) => {
+	return dispatch => {
+		return apiCall("get", `/api/users/${user_id}/messages/${message_id}`)
+			.then(res => dispatch(loadOneMessage(res)))
+			.catch(err => dispatch(addError(err.message)));
+	}
+}
+
 export const fetchMessages = () => {
 	return dispatch => {
 		// Send API call to get all messages
