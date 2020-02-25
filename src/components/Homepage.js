@@ -7,7 +7,7 @@ const Homepage = ({ currentUser }) => {
 	if(!currentUser.isAuthenticated){
 		return (
 			<div className="home-hero d-flex flex-column justify-content-around align-items-center">
-				<h1>Welcome to Warbler</h1>
+				<h1 className="text-center">Welcome to Warbler</h1>
 				<div className="container d-flex flex-column align-items-center">
 					<h4>New around here?</h4>
 					<Link to="/signup" className="btn btn-primary">
