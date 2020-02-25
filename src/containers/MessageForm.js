@@ -77,7 +77,8 @@ class MessageForm extends React.Component {
 
 function mapStateToProps(state){
 	return {
-		errors: state.errors
+		errors: state.errors,
+		foundMessage: state.messages.foundMessage
 	};
 }
 
