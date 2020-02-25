@@ -167,7 +167,14 @@ Current features are user signup & signin, message creation and deletion, with f
 #### Redux Pt.7
 * Edit action
 * Add getOneMessage const, handler, action
+* Include in MessageForm
 * ...then realize I could just get all & find...
+* Refactor MessageForm onSubmit
+
+#### MessageItem
+* Style edit/delete buttons in container
+* Apply `display: grid` & style sizing
+* Break long messages
 
 ---
 
