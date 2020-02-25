@@ -1,3 +1,5 @@
+/*=================Root/Globals=================*/
+
 :root {
 	--color1: #ECF8F8;
 	--color2: #EEE4E1;
@@ -26,7 +28,7 @@ body {
 	cursor: pointer;
 }
 
-/*Navbar Styling*/
+/*================Navbar Styling================*/
 
 .navbar {
 	margin-bottom: 1rem;
@@ -61,7 +63,7 @@ ul.nav.navbar-nav li {
 	background-color: var(--color4);
 }
 
-/*Homepage*/
+/*===================Homepage===================*/
 
 .home-hero {
 	width: 100%;
@@ -81,6 +83,8 @@ ul.nav.navbar-nav li {
 #messages {
 	padding-left: 15px;
 }
+
+/*=================MessageItem=================*/
 
 .message-item {
 	display: grid;
@@ -105,24 +109,24 @@ ul.nav.navbar-nav li {
 	opacity: 0;
 	transition: opacity 120ms ease-in;
 	position: absolute;
-	right: 0.5rem;
+	right: 0;
 	display: flex;
 	justify-content: center;
 	top: 0;
 }
 
 .message-item__btn {
+	margin-right: 0.5rem;
 	margin-top: 0.5rem;
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 }
-.message-item__btn--delete {}
 
-.message-item__btn--edit {margin-right: 0.5rem}
-
-.list-group-item:hover .btn-container {
+.message-item:hover .btn-container {
 	opacity: 1;
 }
+
+/*===================Profile===================*/
 
 .useraside-card {
 	background-color: var(--color3);
@@ -131,6 +135,8 @@ ul.nav.navbar-nav li {
 .useraside-card .card-img-top {
 	background-color: var(--color2);
 }
+
+/*====================Footer====================*/
 
 footer {
 	background-color: var(--color5);
