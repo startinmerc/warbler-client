@@ -69,7 +69,7 @@ class MessageForm extends React.Component {
 					<label htmlFor="message">
 						New Message:
 					</label>
-					<input 
+					<textarea 
 						autoFocus
 						maxLength="160"
 						type="text" 
