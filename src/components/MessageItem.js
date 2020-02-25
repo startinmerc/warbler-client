@@ -25,14 +25,15 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 		</div>
 		{/* Show/hide remove messae button if author logged in */}
 		{isCorrectUser && (
-			<>
-				<button className="btn message-item__btn message-item__btn--delete" onClick={removeMessage}>
-					<Cross size="20" />
-				</button>
-				<Link to={`/users/${userId}/messages/${msgId}/edit`} className="btn btn-danger">
-					Edit Message
+			<div className="btn-container">
+				<Link to={`/users/${userId}/messages/${msgId}/edit`} 
+				 className="btn btn-warning btn-block message-item__btn message-item__btn--edit">
+					Edit
 				</Link>
-			</>
+				<button className="btn btn-danger btn-block message-item__btn message-item__btn--delete" onClick={removeMessage}>
+					Delete
+				</button>
+			</div>
 		)}
 	</li>
 );
