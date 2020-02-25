@@ -5,7 +5,7 @@ import Icon from "../images/Icon";
 import Cross from "../images/Cross";
 
 const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser, userId, msgId}) => (
-	<li className="list-group-item d-flex message-item p-3">
+	<li className="list-group-item message-item p-3">
 		{/* profile image or backup icon */}
 		{profileImageUrl ? (
 			<img src={profileImageUrl}
@@ -21,16 +21,16 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			<Moment className="text-muted ml-2" fromNow>
 				{date}
 			</Moment>
-			<p>{text}</p>
+			<p className="text-break">{text}</p>
 		</div>
 		{/* Show/hide remove messae button if author logged in */}
 		{isCorrectUser && (
 			<div className="btn-container">
 				<Link to={`/users/${userId}/messages/${msgId}/edit`} 
-				 className="btn btn-warning btn-block message-item__btn message-item__btn--edit">
+				 className="btn btn-warning message-item__btn message-item__btn--edit">
 					Edit
 				</Link>
-				<button className="btn btn-danger btn-block message-item__btn message-item__btn--delete" onClick={removeMessage}>
+				<button className="btn btn-danger message-item__btn message-item__btn--delete" onClick={removeMessage}>
 					Delete
 				</button>
 			</div>

@@ -82,6 +82,11 @@ ul.nav.navbar-nav li {
 	padding-left: 15px;
 }
 
+.message-item {
+	display: grid;
+	grid-template-columns: 100px auto;
+}
+
 .message-item:nth-of-type(odd) {
 	background-color: var(--color3);
 }
@@ -100,16 +105,20 @@ ul.nav.navbar-nav li {
 	opacity: 0;
 	transition: opacity 120ms ease-in;
 	position: absolute;
-	right: 0.75rem;
-	height: 100%;
+	right: 0.5rem;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	top: 0;
 }
+
+.message-item__btn {
+	margin-top: 0.5rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+}
 .message-item__btn--delete {}
 
-.message-item__btn--edit {}
+.message-item__btn--edit {margin-right: 0.5rem}
 
 .list-group-item:hover .btn-container {
 	opacity: 1;
