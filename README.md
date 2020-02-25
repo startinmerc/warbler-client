@@ -176,6 +176,10 @@ Current features are user signup & signin, message creation and deletion, with f
 * Apply `display: grid` & style sizing
 * Break long messages
 
+#### Styling
+* Restyle landing page w/ position, calc
+
+
 ---
 
 ### To Do:
