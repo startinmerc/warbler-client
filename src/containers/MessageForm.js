@@ -12,39 +12,42 @@ class MessageForm extends React.Component {
 	}
 
 	async getMsgPop(){
+		// API get all messages
 		await this.props.fetchMessages();
+		// Find message in messages
 		const foundMessage = this.props.messages.find(
+			// ID extracted from pathname
 			message => message._id === this.props.location.pathname.split("/")[4]);
+		// Set found message in state
 		this.setState({message: foundMessage.text});
 	}
 
 	componentDidMount(){
+		// If edit form
 		if(this.props.edit){
+			// Call async above
 			this.getMsgPop();
 		}
 	}
 
-	// Handle form submission if new message
-	handleNewMessage = e => {
+	handleSubmit = e => {
 		// Stop page refresh
 		e.preventDefault();
-		// Send API call through Redux
-		this.props.postNewMessage(this.state.message);
-		// Clear message
-		this.setState({message:""});
-		// Redirect to homepage
-		this.props.history.push("/");
-	}
-
-	handleEditMessage = e => {
-		// Stop page refresh
-		e.preventDefault();
-		// Send API call through Redux
-		this.props.editMessage(
-			this.props.location.pathname.split("/")[2],
-			this.props.location.pathname.split("/")[4],
-			this.state.message
-		);
+		// If Edit form
+		if(this.props.edit){
+			// Call editMessage
+			this.props.editMessage(
+				// Extract user_id from pathname
+				this.props.location.pathname.split("/")[2],
+				// Extract message_id from pathname
+				this.props.location.pathname.split("/")[4],
+				// Pass edited message
+				this.state.message
+			);
+		} else {
+			// Send API call through Redux
+			this.props.postNewMessage(this.state.message);
+		}
 		// Clear message
 		this.setState({message:""});
 		// Redirect to homepage
@@ -53,7 +56,7 @@ class MessageForm extends React.Component {
 
 	render(){
 		return(
-			<form onSubmit={this.props.edit ? this.handleEditMessage : this.handleNewMessage} className="new-message-form">
+			<form onSubmit={this.handleSubmit} className="new-message-form">
 
 				{/* Show any errors */}
 				{this.props.errors.message && (
