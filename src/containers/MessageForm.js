@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { postNewMessage } from "../store/actions/messages";
+import { postNewMessage, editMessage, fetchOneMessage } from "../store/actions/messages";
 
 class MessageForm extends React.Component {
 
@@ -66,4 +66,4 @@ function mapStateToProps(state){
 	};
 }
 
-export default connect(mapStateToProps, { postNewMessage })(MessageForm);
+export default connect(mapStateToProps, { postNewMessage, fetchOneMessage, editMessage })(MessageForm);
