@@ -19,6 +19,13 @@ class MessageForm extends React.Component {
 		debugger
 		this.setState({message: this.props.foundMessage.text});
 	}
+
+	componentDidMount(){
+		if(this.props.edit){
+			this.getMsgPop();
+		}
+	}
+
 	// Handle form submission if new message
 	handleNewMessage = e => {
 		// Stop page refresh
