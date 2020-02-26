@@ -42,13 +42,12 @@ body {
 	cursor: pointer;
 }
 
-.navbar-brand {
-	padding: 5px;
-	border-radius: 50%;
+.navbar-brand, .navbar-brand svg {
+	transition: all 230ms ease-in; 
 }
 
 .navbar-brand:hover {
-	background-color: var(--color3);
+	color: black;
 }
 
 .navbar-brand:hover svg {

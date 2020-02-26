@@ -16,7 +16,7 @@ class Navbar extends Component {
 			<nav className="navbar navbar-expand">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
-						<Icon color="var(--color1)"/>
+						<Icon color="var(--color1)" className="icon--navbar"/> Warbler
 					</Link>
 					{/*Only show messages, user card if logged in*/}
 					{this.props.currentUser.isAuthenticated ? (
@@ -35,10 +35,10 @@ class Navbar extends Component {
 					) : (
 					<ul className="nav navbar-nav navbar-right">
 						<li>
-							<Link to="/signup">Sign up</Link>
+							<Link to="/signup" className="btn btn-success">Sign up</Link>
 						</li>
 						<li>
-							<Link to="/signin">Sign in</Link>
+							<Link to="/signin" className="btn btn-primary">Sign in</Link>
 						</li>
 					</ul>
 					)}
