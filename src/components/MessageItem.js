@@ -16,7 +16,7 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 			)
 		}
 		<div className="ml-2">
-			<Link to={`/users/${username}`}>@{username}</Link>
+			<Link to={`/users/${userId}/messages`}>@{username}</Link>
 			<Moment className="text-muted ml-2" fromNow>
 				{date}
 			</Moment>

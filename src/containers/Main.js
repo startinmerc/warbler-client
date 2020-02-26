@@ -7,6 +7,7 @@ import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
 import MessageForm from "../containers/MessageForm";
+import MessageList from "../containers/MessageList";
 
 const Main = props => {
 	const { authUser, errors, removeError, currentUser } = props;
@@ -37,6 +38,10 @@ const Main = props => {
 						{...props}
 					/>
 				} />
+				<Route path="/users/:id/messages/" render={
+					props => <MessageList fromUser="true" {...props} />
+				}/>
+
 				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
 				<Route path="/users/:id/messages/:message_id/edit" component={
 					withAuth(MessageForm, {edit:true})} 
