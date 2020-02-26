@@ -12,7 +12,15 @@ class MessageList extends Component {
 
 	render() {
 		// Extract variables from props
-		const { messages, removeMessage, currentUser } = this.props;
+		const { removeMessage, currentUser, fromUser } = this.props;
+		let messages = this.props.messages;
+		// Filter messages if user_id supplied
+		if(fromUser){
+			const fromID = this.props.location.pathname.split("/")[2];
+			messages = this.props.messages.filter(message => (
+				message.user._id === fromID
+			))
+		};
 
 		// Map all message components, including bound functions
 		let messageList = messages.map((m)=>(
