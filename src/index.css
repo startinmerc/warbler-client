@@ -42,6 +42,10 @@ body {
 	cursor: pointer;
 }
 
+.nav__user {
+	color: var(--color1);
+}
+
 .navbar-brand, .navbar-brand svg {
 	transition: all 230ms ease-in; 
 }
@@ -139,4 +143,13 @@ ul.nav.navbar-nav li {
 footer {
 	background-color: var(--color5);
 	margin-top: auto;
+}
+
+/*==========Responsive - Breakpoint MD==========*/
+
+@media(max-width: 768px){
+	.nav__user {
+		margin-right: -8px !important;
+	}
+
 }

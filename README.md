@@ -178,12 +178,14 @@ Current features are user signup & signin, message creation and deletion, with f
 
 #### Styling
 * Restyle landing page w/ position, calc
-
+* Tweak navbar styling, add btn classes to links
+* Responsive navbar elements
 
 ---
 
 ### To Do:
 
+* Add user page to show user's messages
 * Add isEdited to db.message, render in frontend
 * Add shape-outside to MessageItem to wrap user icon
 * Rebuild layout

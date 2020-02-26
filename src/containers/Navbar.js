@@ -20,9 +20,12 @@ class Navbar extends Component {
 					</Link>
 					{/*Only show messages, user card if logged in*/}
 					{this.props.currentUser.isAuthenticated ? (
-						<ul className="nav navbar-nav navbar-right d-flex align-items-center">
+						<ul className="nav navbar-nav navbar-right d-flex align-items-center justify-content-end">
+							<li className="nav__user">
+								Logged in as @{this.props.currentUser.user.username}
+							</li>
 							<li>
-								<Link className="btn btn-success" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
+								<Link className="btn btn-success d-none d-md-inline-block" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
 									New Message
 								</Link>
 							</li>
