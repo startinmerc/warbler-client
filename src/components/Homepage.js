@@ -21,6 +21,7 @@ const Homepage = ({ currentUser }) => {
 			<MessageTimeline 
 				profileImageUrl={currentUser.user.profileImageUrl}
 				username={currentUser.user.username}
+				userID={currentUser.user._id}
 				/>
 		);
 	}
