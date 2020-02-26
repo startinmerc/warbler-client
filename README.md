@@ -181,11 +181,20 @@ Current features are user signup & signin, message creation and deletion, with f
 * Tweak navbar styling, add btn classes to links
 * Responsive navbar elements
 
+#### User Path
+* Add Path & update links to individual user
+* Modify MessageList to filter by user if needed
+* Add new message link to UserASide
+
+#### isEdited
+* Add isEdited to Message schema & edit handler
+* Render text if message is edited
+
 ---
 
 ### To Do:
 
-* Add user page to show user's messages
-* Add isEdited to db.message, render in frontend
-* Add shape-outside to MessageItem to wrap user icon
-* Rebuild layout
+* Add isCorrectUser to MessageForm edit
+* Expand User to include profile text
+* Render in UserAside
+* Make User page include UserAside
