@@ -38,7 +38,7 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-				<Route path="/users/:id/messages/" render={
+				<Route exact path="/users/:id/messages/" render={
 					props => <MessageList fromUser="true" {...props} />
 				}/>
 
