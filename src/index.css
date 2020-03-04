@@ -142,7 +142,7 @@ h1,h2,h3,h4,h5 {
 /*====================Footer====================*/
 
 footer {
-	background-color: var(--color5);
+	background-color: var(--dark);
 }
 
 /*==========Responsive - Breakpoint MD==========*/
