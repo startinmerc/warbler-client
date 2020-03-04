@@ -1,8 +1,8 @@
 # Warbler
 
-## (Live Site Pending)
+## [Landing Page](https://startinmerc-warbler-client.herokuapp.com/)
 
-## [GitHub Repo for backend](https://github.com/startinmerc/warbler-server)
+### [GitHub Repo for backend](https://github.com/startinmerc/warbler-server)
 
 #### A full-stack twitter clone built on:
 
@@ -21,6 +21,8 @@ The site is built on a Node/Express API with a Mongo database, with React/Redux 
 It makes extensive use of Redux for API interactions and authentification, and Bootstrap for a base UI to build off.
 
 Current features are user signup & signin, message creation and deletion, with full RESTful routing a main goal.
+
+Version logs for the entire project are below...
 
 ---
 
@@ -189,6 +191,29 @@ Current features are user signup & signin, message creation and deletion, with f
 #### isEdited
 * Add isEdited to Message schema & edit handler
 * Render text if message is edited
+
+#### Deployment
+* Add `static.json` with refs for Heroku
+* Create Heroku app through Heroku CLI
+* Push live site
+
+## V1.0
+
+#### Vapourwave Redesign
+* Create new color palette
+* Import fonts
+* Strip previous styling
+
+#### Navbar + Footer
+* Strip elements, rearrange as `.navbar-collapse`
+* Include BootstrapJS in `index.html`
+* Restyle `.navbar-brand`
+* Restyle `<footer>` with new colors
+
+#### New Globals
+* Change link color if not btn
+* Apply new fonts
+* Fix `#root` sizing issue & auto expand `<main>`
 
 ---
 
