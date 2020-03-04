@@ -5,7 +5,7 @@
 	},
 	"proxies": {
 		"/api": {
-			"origin": "https://startinmerc-warbler-server.herokuapp.com/"
+			"origin": "https://startinmerc-warbler-server.herokuapp.com/api"
 		}
 	}
 }
