@@ -34,40 +34,32 @@ h1,h2,h3,h4,h5 {
 
 /*================Navbar Styling================*/
 
-.navbar {
-	margin-bottom: 1rem;
+.navbar-brand {
+	position: relative;
+	z-index: 1;
 }
 
-.navbar a {
-	color: var(--color1);
+.navbar-brand__header {
+	font-size: 4rem;
+	color: var(--vw-pink);
+	text-shadow: 1px 1px 0px var(--vw-blue);
 }
 
-.navbar a:hover {
-	cursor: pointer;
+.icon--navbar {
+	fill: var(--vw-blue);
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
 }
 
-.nav__user {
-	color: var(--color1);
+.navbar-brand:hover .navbar-brand__header {
+	color: var(--vw-purple);
 }
 
-.navbar-brand, .navbar-brand svg {
-	transition: all 230ms ease-in; 
-}
-
-.navbar-brand:hover {
-	color: black;
-}
-
-.navbar-brand:hover svg {
-	fill: black;
-}
-
-ul.nav.navbar-nav li {
-	margin: 0 0.5rem;
-}
-
-.navbar {
-	background-color: var(--color4);
+.navbar-brand:hover .icon---navbar {
+	fill: var(--vw-purple);
 }
 
 /*===================Homepage===================*/
@@ -152,8 +144,8 @@ footer {
 /*==========Responsive - Breakpoint MD==========*/
 
 @media(max-width: 768px){
-	.nav__user {
-		margin-right: -8px !important;
+	.navbar .btn {
+		display: block;
+		width: 100%;
 	}
-
 }
