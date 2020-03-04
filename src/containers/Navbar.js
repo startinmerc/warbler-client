@@ -15,9 +15,12 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar navbar-expand navbar-dark bg-dark">
 				<div className="container-fluid">
-					<Link to="/" className="navbar-brand">
-						<Icon color="var(--color1)" className="icon--navbar"/> Warbler
-					</Link>
+					<div className="navbar-brand">
+						<Icon size="100px" classes="icon--navbar"/> 
+						<Link to="/">
+							<h1 className="d-inline-block mb-0">Warbler</h1>
+						</Link>
+					</div>
 					{/*Only show messages, user card if logged in*/}
 					{this.props.currentUser.isAuthenticated ? (
 						<ul className="nav navbar-nav navbar-right d-flex align-items-center justify-content-end">
