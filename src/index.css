@@ -1,12 +1,11 @@
 /*=================Root/Globals=================*/
 
 :root {
-	--color1: #ECF8F8;
-	--color2: #EEE4E1;
-	--color3: #E7D8C9;
-	--color3t: #E7D8C999;
-	--color4: #E6BEAE;
-	--color5: #B2967D;
+	--vw-pink: rgb(255,113,206);
+	--vw-blue: rgb(1,205,254);
+	--vw-green: rgb(5,255,161);
+	--vw-purple: rgb(185,103,255);
+	--vw-yellow: rgb(255,251,150);
 }
 
 html {
@@ -14,8 +13,13 @@ html {
 }
 
 body {
-	background-color: var(--color2);
+	font-family: 'Fira Mono', monospace;
+	background-color: var(--secondary);
 	height: 100%;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Great Vibes', cursive;
 }
 
 #root {
