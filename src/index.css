@@ -27,14 +27,12 @@ h1,h2,h3,h4,h5 {
 	font-family: 'Great Vibes', cursive;
 }
 
-#root {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
+a:not(.btn) {
+	color: var(--vw-purple);
 }
 
-.btn:hover, .btn:focus {
-	cursor: pointer;
+a:not(.btn):hover {
+	color: var(--vw-pink);
 }
 
 /*================Navbar Styling================*/
@@ -63,7 +61,7 @@ h1,h2,h3,h4,h5 {
 	color: var(--vw-purple);
 }
 
-.navbar-brand:hover .icon---navbar {
+.navbar-brand:hover .icon--navbar {
 	fill: var(--vw-purple);
 }
 
