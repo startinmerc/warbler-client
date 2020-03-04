@@ -17,7 +17,7 @@ class Navbar extends Component {
 				<div className="navbar-brand">
 					<Icon size="100px" classes="icon--navbar"/> 
 					<Link to="/">
-						<h1 className="d-inline-block mb-0">Warbler</h1>
+						<h1 className="d-inline-block mb-0 navbar-brand__header">Warbler</h1>
 					</Link>
 				</div>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
