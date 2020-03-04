@@ -24,10 +24,10 @@ class Navbar extends Component {
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul className="navbar-nav ml-auto">
 					{/*Only show messages, user card if logged in*/}
 					{this.props.currentUser.isAuthenticated ? (
-					<ul className="navbar-nav ml-auto">
-						<li className="nav-item mr-0 mr-md-3 my-1 my-md-auto text-white text-center text-md-left">
+						<><li className="nav-item mr-0 mr-md-3 my-1 my-md-auto text-white text-center text-md-left">
 							Logged in as @{this.props.currentUser.user.username}
 						</li>
 						<li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
@@ -39,18 +39,17 @@ class Navbar extends Component {
 							<button className="btn btn-outline-secondary" onClick={this.logOut}>
 								Log Out
 							</button>
-						</li>
-					</ul>
+						</li></>
+					
 					) : (
-					<ul className="nav navbar-nav navbar-right">
-						<li>
+						<><li>
 							<Link to="/signup" className="btn btn-success">Sign up</Link>
 						</li>
 						<li>
 							<Link to="/signin" className="btn btn-primary">Sign in</Link>
-						</li>
-					</ul>
+						</li></>
 					)}
+					</ul>
 				</div>
 			</nav>
 		);
