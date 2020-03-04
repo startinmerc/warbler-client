@@ -1,69 +1,68 @@
 /*=================Root/Globals=================*/
 
 :root {
-	--color1: #ECF8F8;
-	--color2: #EEE4E1;
-	--color3: #E7D8C9;
-	--color3t: #E7D8C999;
-	--color4: #E6BEAE;
-	--color5: #B2967D;
-}
-
-html {
-	height: 100%;
+	--vw-pink: rgb(255,113,206);
+	--vw-blue: rgb(1,205,254);
+	--vw-green: rgb(5,255,161);
+	--vw-purple: rgb(185,103,255);
+	--vw-yellow: rgb(255,251,150);
 }
 
 body {
-	background-color: var(--color2);
-	height: 100%;
+	font-family: 'Fira Mono', monospace;
+	background-color: var(--secondary);
 }
 
 #root {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	min-height: 100vh;
 }
 
-.btn:hover, .btn:focus {
-	cursor: pointer;
+main {
+	flex-grow: 1;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Great Vibes', cursive;
+}
+
+a:not(.btn) {
+	color: var(--vw-purple);
+}
+
+a:not(.btn):hover {
+	color: var(--vw-pink);
 }
 
 /*================Navbar Styling================*/
 
-.navbar {
-	margin-bottom: 1rem;
+.navbar-brand {
+	position: relative;
+	z-index: 1;
 }
 
-.navbar a {
-	color: var(--color1);
+.navbar-brand__header {
+	font-size: 4rem;
+	color: var(--vw-pink);
+	text-shadow: 1px 1px 0px var(--vw-blue);
 }
 
-.navbar a:hover {
-	cursor: pointer;
+.icon--navbar {
+	fill: var(--vw-blue);
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
 }
 
-.nav__user {
-	color: var(--color1);
+.navbar-brand:hover .navbar-brand__header {
+	color: var(--vw-purple);
 }
 
-.navbar-brand, .navbar-brand svg {
-	transition: all 230ms ease-in; 
-}
-
-.navbar-brand:hover {
-	color: black;
-}
-
-.navbar-brand:hover svg {
-	fill: black;
-}
-
-ul.nav.navbar-nav li {
-	margin: 0 0.5rem;
-}
-
-.navbar {
-	background-color: var(--color4);
+.navbar-brand:hover .icon--navbar {
+	fill: var(--vw-purple);
 }
 
 /*===================Homepage===================*/
@@ -141,15 +140,14 @@ ul.nav.navbar-nav li {
 /*====================Footer====================*/
 
 footer {
-	background-color: var(--color5);
-	margin-top: auto;
+	background-color: var(--dark);
 }
 
 /*==========Responsive - Breakpoint MD==========*/
 
 @media(max-width: 768px){
-	.nav__user {
-		margin-right: -8px !important;
+	.navbar .btn {
+		display: block;
+		width: 100%;
 	}
-
 }

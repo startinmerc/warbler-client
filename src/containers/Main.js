@@ -12,7 +12,7 @@ import MessageList from "../containers/MessageList";
 const Main = props => {
 	const { authUser, errors, removeError, currentUser } = props;
 	return (
-		<div className="container mb-3">
+		<main className="container mb-3">
 			<Switch>
 				<Route exact path="/" render={
 					props => <Homepage currentUser={currentUser} {...props}/>
@@ -47,7 +47,7 @@ const Main = props => {
 					withAuth(MessageForm, {edit:true})} 
 				/>
 			</Switch>
-		</div>
+		</main>
 	)
 }
 
