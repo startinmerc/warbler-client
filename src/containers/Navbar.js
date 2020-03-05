@@ -13,7 +13,11 @@ class Navbar extends Component {
 
 	render(){
 		return (
+<<<<<<< HEAD
 			<nav className="navbar navbar-dark navbar-expand-md bg-dark mb-3">
+=======
+			<nav className="navbar navbar-dark navbar-expand-md mb-3">
+>>>>>>> dev-branch
 				<div className="navbar-brand">
 					<Icon size="100px" classes="icon--navbar"/> 
 					<Link to="/">
@@ -29,6 +33,7 @@ class Navbar extends Component {
 					{this.props.currentUser.isAuthenticated ? (
 						<><li className="nav-item mr-0 mr-md-3 my-1 my-md-auto text-white text-center text-md-left">
 							Logged in as @{this.props.currentUser.user.username}
+<<<<<<< HEAD
 						</li>
 						<li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
 							<Link className="btn btn-outline-success" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
@@ -47,6 +52,26 @@ class Navbar extends Component {
 						</li>
 						<li>
 							<Link to="/signin" className="btn btn-primary">Sign in</Link>
+=======
+						</li>
+						<li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
+							<Link className="btn btn-outline-success" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
+								New Message
+							</Link>
+						</li>
+						<li className="nav-item my-1 my-md-0">
+							<button className="btn btn-outline-secondary" onClick={this.logOut}>
+								Log Out
+							</button>
+						</li></>
+					
+					) : (
+						<><li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
+							<Link to="/signup" className="btn btn-outline-success">Sign up</Link>
+						</li>
+						<li className="nav-item my-1 my-md-0">
+							<Link to="/signin" className="btn btn-outline-primary">Sign in</Link>
+>>>>>>> dev-branch
 						</li></>
 					)}
 					</ul>
