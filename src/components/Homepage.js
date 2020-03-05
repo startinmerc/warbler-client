@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Icon from "../images/Icon";
 import MessageTimeline from "./MessageTimeline";
 
 const Homepage = ({ currentUser }) => {
@@ -7,10 +8,14 @@ const Homepage = ({ currentUser }) => {
 	if(!currentUser.isAuthenticated){
 		return (
 			<div className="home-hero d-flex flex-column justify-content-around align-items-center">
-				<h1 className="text-center">Welcome to Warbler</h1>
+				<div className="hero-title text-center">
+					<Icon size="80%" classes="icon--hero"/>
+					<h4>Welcome to</h4>
+					<h1>Warbler</h1>
+				</div>
 				<div className="container d-flex flex-column align-items-center">
-					<h4>New around here?</h4>
-					<Link to="/signup" className="btn btn-primary">
+					<p>New around here?</p>
+					<Link to="/signup" className="btn btn-outline-success">
 						Sign up!
 					</Link>
 				</div>
