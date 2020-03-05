@@ -178,4 +178,10 @@ a:not(.btn):hover {
 		display: block;
 		width: 100%;
 	}
+	.hero-title h1 {
+		font-size: 7rem;
+	}
+	.icon--hero {
+		top: 5%;
+	}
 }
