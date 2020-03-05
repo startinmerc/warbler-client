@@ -40,7 +40,6 @@ class Navbar extends Component {
 								Log Out
 							</button>
 						</li></>
-					
 					) : (
 						<><li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
 							<Link to="/signup" className="btn btn-outline-success">Sign up</Link>
