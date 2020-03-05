@@ -42,11 +42,11 @@ class Navbar extends Component {
 						</li></>
 					
 					) : (
-						<><li>
-							<Link to="/signup" className="btn btn-success">Sign up</Link>
+						<><li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
+							<Link to="/signup" className="btn btn-outline-success">Sign up</Link>
 						</li>
-						<li>
-							<Link to="/signin" className="btn btn-primary">Sign in</Link>
+						<li className="nav-item my-1 my-md-0">
+							<Link to="/signin" className="btn btn-outline-primary">Sign in</Link>
 						</li></>
 					)}
 					</ul>
