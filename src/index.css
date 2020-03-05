@@ -171,12 +171,6 @@ a:not(.btn):hover {
 	background-color: var(--color2);
 }
 
-/*====================Footer====================*/
-
-footer {
-	background-color: var(--dark);
-}
-
 /*==========Responsive - Breakpoint MD==========*/
 
 @media(max-width: 768px){
