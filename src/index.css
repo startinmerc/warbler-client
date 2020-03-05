@@ -83,6 +83,21 @@ a:not(.btn):hover {
 	text-shadow: 2px 2px var(--vw-blue),
 							 0px 0px 10px var(--vw-pink);
 }
+
+.icon--hero {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.icon--hero path {
+	fill: rgba(0,0,0,0);
+	stroke: var(--vw-blue);
+	stroke-width: 2px;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+}
 #messages {
 	padding-left: 15px;
 }
