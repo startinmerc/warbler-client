@@ -67,20 +67,13 @@ a:not(.btn):hover {
 	fill: var(--vw-purple);
 }
 
-/*===================Homepage===================*/
+/*=====================Hero=====================*/
 
 .home-hero {
-	width: 100vw;
-	height: 90vh;
+	height: 80vh;
 	margin-top: -1rem;
 	margin-bottom: -1rem;
-	background-position: center center;
-	background-size: cover;
-	background-image: url('./images/home-hero.jpg');
-	color: var(--color2);
-	text-shadow: 0 0 5px #090909;
 	position: relative;
-  left: calc(-1 * (100vw - 100%) / 2);
 }
 
 #messages {
