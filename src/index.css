@@ -10,7 +10,9 @@
 
 body {
 	font-family: 'Fira Mono', monospace;
-	background-color: var(--secondary);
+	color: var(--white);
+	background-color: var(--vw-purple);
+	background-image: linear-gradient(15deg, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.7) 100%);
 }
 
 #root {
@@ -65,21 +67,53 @@ a:not(.btn):hover {
 	fill: var(--vw-purple);
 }
 
-/*===================Homepage===================*/
+/*=====================Hero=====================*/
 
 .home-hero {
-	width: 100vw;
-	height: 90vh;
+	height: 80vh;
 	margin-top: -1rem;
 	margin-bottom: -1rem;
-	background-position: center center;
-	background-size: cover;
-	background-image: url('./images/home-hero.jpg');
-	color: var(--color2);
-	text-shadow: 0 0 5px #090909;
 	position: relative;
-  left: calc(-1 * (100vw - 100%) / 2);
 }
+
+.hero-title h1 {
+	font-size: 10rem;
+	transform: rotate(-15deg) translateY(-2rem);
+	color: var(--vw-pink);
+	text-shadow: 2px 2px var(--vw-blue),
+							 0px 0px 10px var(--vw-pink);
+}
+
+.icon--hero {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.icon--hero path {
+	fill: rgba(0,0,0,0);
+	stroke: var(--vw-blue);
+	stroke-width: 2px;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	animation: draw 3s linear forwards;
+	filter: drop-shadow(0px 0px 4px var(--vw-blue));
+}
+
+@keyframes draw {
+	80% {
+		stroke-dashoffset: 0;
+		fill: rgba(0,0,0,0);
+	}
+	100% {
+		stroke-dashoffset: 0;
+		stroke-width: 0px;
+		fill: var(--vw-blue);
+	}
+}
+
+/*Messages*/
 
 #messages {
 	padding-left: 15px;
@@ -137,17 +171,17 @@ a:not(.btn):hover {
 	background-color: var(--color2);
 }
 
-/*====================Footer====================*/
-
-footer {
-	background-color: var(--dark);
-}
-
 /*==========Responsive - Breakpoint MD==========*/
 
 @media(max-width: 768px){
 	.navbar .btn {
 		display: block;
 		width: 100%;
+	}
+	.hero-title h1 {
+		font-size: 7rem;
+	}
+	.icon--hero {
+		top: 5%;
 	}
 }
