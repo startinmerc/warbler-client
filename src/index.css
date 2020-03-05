@@ -76,6 +76,13 @@ a:not(.btn):hover {
 	position: relative;
 }
 
+.hero-title h1 {
+	font-size: 10rem;
+	transform: rotate(-15deg) translateY(-2rem);
+	color: var(--vw-pink);
+	text-shadow: 2px 2px var(--vw-blue),
+							 0px 0px 10px var(--vw-pink);
+}
 #messages {
 	padding-left: 15px;
 }
