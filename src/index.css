@@ -10,7 +10,9 @@
 
 body {
 	font-family: 'Fira Mono', monospace;
-	background-color: var(--secondary);
+	color: var(--white);
+	background-color: var(--vw-purple);
+	background-image: linear-gradient(15deg, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.7) 100%);
 }
 
 #root {
