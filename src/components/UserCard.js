@@ -12,7 +12,7 @@ const UserCard = ({profileImageUrl, username, userID}) => (
 			/>
 		) : (
 			<div className="d-none d-md-block card-img-top p-1">
-				<Icon size="100%" color="var(--vw-blue)"/>
+				<Icon size="100%" color="var(--white)"/>
 			</div>
 		)}
 			
