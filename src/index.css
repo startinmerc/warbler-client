@@ -182,6 +182,21 @@ form h2 {
 	background-color: rgba(0,0,0,0.1);
 }
 
+/*===================AdSpace===================*/
+
+.adspace {
+	border-radius: 0.25rem;
+	border: 2px solid var(--white);
+	background: linear-gradient(
+		45deg,
+		var(--vw-green),
+		var(--vw-blue),
+		var(--vw-purple),
+		var(--vw-pink),
+		var(--vw-yellow)
+	)
+}
+
 /*==========Responsive - Breakpoint MD==========*/
 
 @media(max-width: 768px){

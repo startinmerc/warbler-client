@@ -7,10 +7,7 @@ const MessageTimeline = props => {
 		<div className="row">
 			<UserCard profileImageUrl={props.profileImageUrl} username={props.username} userID={props.userID}/>
 			<MessageList />
-			<div className="col-2 border border-secondary d-none d-md-block" style={{
-				backgroundColor: "var(--color3)"
-			}}>
-			</div>
+			<div className="col-2 d-none d-md-block adspace"></div>
 		</div>
 	);
 };
