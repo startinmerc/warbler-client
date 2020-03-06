@@ -165,14 +165,8 @@ form h2 {
 	top: 0;
 }
 
-.message-item__btn {
-	margin-right: 0.5rem;
-	margin-top: 0.5rem;
-	padding-top: 0.1rem;
-	padding-bottom: 0.1rem;
-}
-
-.message-item:hover .btn-container {
+.message-item:hover .btn-container,
+ .message-item:focus-within .btn-container {
 	opacity: 1;
 }
 

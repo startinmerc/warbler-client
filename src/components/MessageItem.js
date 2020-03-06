@@ -27,10 +27,10 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 		{isCorrectUser && (
 			<div className="btn-container">
 				<Link to={`/users/${userId}/messages/${msgId}/edit`} 
-				 className="btn btn-warning message-item__btn message-item__btn--edit">
+				 className="btn btn-outline-warning message-item__btn mt-2 mr-2 py-0">
 					Edit
 				</Link>
-				<button className="btn btn-danger message-item__btn message-item__btn--delete" onClick={removeMessage}>
+				<button className="btn btn-outline-danger message-item__btn mt-2 mr-2 py-0" onClick={removeMessage}>
 					Delete
 				</button>
 			</div>
