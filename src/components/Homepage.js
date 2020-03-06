@@ -9,7 +9,7 @@ const Homepage = ({ currentUser }) => {
 		return (
 			<div className="home-hero d-flex flex-column justify-content-around align-items-center">
 				<div className="hero-title text-center">
-					<Icon size="80%" classes="icon--hero"/>
+					<Icon size="80%" classes="icon--hero" triangle/>
 					<h4>Welcome to</h4>
 					<h1>Warbler</h1>
 				</div>
