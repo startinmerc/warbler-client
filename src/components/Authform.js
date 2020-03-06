@@ -56,26 +56,45 @@ class Authform extends Component {
 								{errors.message}
 							</div>
 						}
-						<label htmlFor="email">Email:</label>
-						<input className="form-control" id="email" name="email"
-						 onChange={this.handleChange} value={email} type="email"
-						 />
-						<label htmlFor="password">Password:</label>
-						<input className="form-control" id="password" name="password"
-						 onChange={this.handleChange} type="password" value={password}
-						 />
-						{/* Show extra fields for signup form */}
-						{signUp && (
-							<div>
-								<label htmlFor="username">Username:</label>
-								<input className="form-control" id="username" name="username"
-								 onChange={this.handleChange} value={username} type="text"
-								 />
-								<label htmlFor="profileImageUrl">Image URL:</label>
-								<input className="form-control" id="profileImageUrl" name="profileImageUrl"
-								 onChange={this.handleChange} value={profileImageUrl} type="text"
+						<div className="form-group row">
+							<label htmlFor="email" className="col-sm-2 col-form-label text-right pr-0">Email:</label>
+							<div className="col-sm-10">
+								<input className="form-control" id="email" name="email"
+								 onChange={this.handleChange} value={email} type="email" placeholder="your@email.com"
 								 />
 							</div>
+						 </div>
+							 <div className="form-group row">
+							<label htmlFor="password" className="col-sm-2 col-form-label text-right pr-0">Password:</label>
+							<div className="col-sm-10">
+								<input className="form-control" id="password" name="password"
+								 onChange={this.handleChange} type="password" value={password} placeholder="password"
+								 />
+							</div>
+						 </div>
+						{/* Show extra fields for signup form */}
+						{signUp && (
+							<>
+							<div className="form-group row">
+								<label htmlFor="username" className="col-sm-2 col-form-label text-right pr-0">Username:</label>
+								<div className="col-sm-10 input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">@</div>
+									</div>
+									<input className="form-control" id="username" name="username"
+									 onChange={this.handleChange} value={username} type="text" placeholder="your-desired-username"
+									 />
+								</div>
+							</div>
+							<div className="form-group row d-none">
+								<label htmlFor="profileImageUrl" className="col-sm-2 col-form-label text-right pr-0">Image URL:</label>
+								<div className="col-sm-10">
+									<input className="form-control" id="profileImageUrl" name="profileImageUrl"
+									 onChange={this.handleChange} value={profileImageUrl} type="text" placeholder=""
+									 />
+								</div>
+							</div>
+							</>
 							)}
 						<button type="submit" className="btn btn-outline-success btn-block btn-lg mt-3">
 							{buttonText}
