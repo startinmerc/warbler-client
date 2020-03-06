@@ -115,6 +115,14 @@ a:not(.btn):hover {
 
 /*===================Authform===================*/
 
+form h2 {
+	font-size: 3rem;
+	background: linear-gradient(90deg, var(--vw-yellow) 25%, var(--vw-pink) 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: rgba(0,0,0,0);
+}
+
 .form-control {
 	background-color: transparent;
 	color: var(--white);
