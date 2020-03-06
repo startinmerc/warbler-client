@@ -227,6 +227,13 @@ Version logs for the entire project are below...
 * Add placeholders
 * Add prepend to username field
 
+#### MessageForm
+* Add col to form
+* Disable button if message empty
+
+#### Adspace
+* Style adspace column
+
 ---
 
 ### To Do:
