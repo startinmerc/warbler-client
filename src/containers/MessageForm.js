@@ -56,7 +56,7 @@ class MessageForm extends React.Component {
 
 	render(){
 		return(
-			<form onSubmit={this.handleSubmit} className="new-message-form">
+			<form onSubmit={this.handleSubmit} className="col-8 mx-auto">
 
 				{/* Show any errors */}
 				{this.props.errors.message && (
