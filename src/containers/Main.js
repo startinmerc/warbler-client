@@ -22,7 +22,7 @@ const Main = props => {
 						removeError={removeError}
 						errors={errors}
 						onAuth={authUser}
-						buttonText="Sign in"
+						buttonText="Sign In"
 						heading="Welcome Back"
 						{...props}
 					/>
@@ -33,7 +33,7 @@ const Main = props => {
 						removeError={removeError}
 						errors={errors}
 						onAuth={authUser}
-						buttonText="Sign me up!"
+						buttonText="Sign Up"
 						heading="Join Warbler"
 						{...props}
 					/>
