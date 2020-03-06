@@ -113,6 +113,18 @@ a:not(.btn):hover {
 	}
 }
 
+/*===================Authform===================*/
+
+.form-control {
+	background-color: transparent;
+	color: var(--white);
+}
+
+.form-control:invalid {
+	background-color: var(--danger);
+	color: var(--white);
+}
+
 /*Messages*/
 
 #messages {
