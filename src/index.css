@@ -133,31 +133,26 @@ form h2 {
 	color: var(--white);
 }
 
-/*Messages*/
-
-#messages {
-	padding-left: 15px;
-}
-
 /*=================MessageItem=================*/
 
 .message-item {
 	display: grid;
 	grid-template-columns: 100px auto;
+	border: 2px solid var(--white);
+	background-color: rgba(255,255,255,0.1);
 }
 
-.message-item:nth-of-type(odd) {
-	background-color: var(--color3);
-}
-
-.message-item:nth-of-type(even) {
-	background-color: var(--color3t);
+.message-item:nth-of-type(even){
+	background-color: rgba(255,255,255,0.2);
 }
 
 .message-item__image {
-	max-height: 100px;
+	height: auto;
 	width: 100px;
-	background-color: var(--color2);
+}
+
+.message-item__content {
+	background-color: rgba(0,0,0,0.1);
 }
 
 .btn-container {
@@ -181,7 +176,7 @@ form h2 {
 	opacity: 1;
 }
 
-/*===================Profile===================*/
+/*==================User Card==================*/
 
 .user-card {
 	background-color: rgba(255,255,255,0.1);
@@ -189,7 +184,7 @@ form h2 {
 }
 
 .user-card .card-body {
-	background-color: rgba(0,0,0,0.1)
+	background-color: rgba(0,0,0,0.1);
 }
 
 /*==========Responsive - Breakpoint MD==========*/
