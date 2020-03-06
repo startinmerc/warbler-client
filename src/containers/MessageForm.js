@@ -83,7 +83,7 @@ class MessageForm extends React.Component {
 						{this.state.message.length}/160
 					</small>
 				</div>
-				<button type="submit" className="btn btn-success btn-block">
+				<button type="submit" className="btn btn-outline-success btn-block" disabled={this.state.message.length < 1 ? "disabled" : null}>
 					Submit Message
 				</button>
 			</form>
