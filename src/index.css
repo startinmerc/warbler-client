@@ -91,7 +91,7 @@ a:not(.btn):hover {
 	z-index: -1;
 }
 
-.icon--hero path {
+.icon--hero .bird-path {
 	fill: rgba(0,0,0,0);
 	stroke: var(--vw-blue);
 	stroke-width: 2px;
