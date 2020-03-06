@@ -16,9 +16,9 @@ const UserCard = ({profileImageUrl, username, userID}) => (
 			</div>
 		)}
 			
-			<div className="card-body">
+			<div className="card-body text-center">
 				<h5>@{username}</h5>
-			<Link className="btn btn-success" to={`/users/${userID}/messages/new`}>
+			<Link className="btn btn-outline-success" to={`/users/${userID}/messages/new`}>
 				New Message
 			</Link>
 			</div>
