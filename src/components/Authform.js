@@ -47,7 +47,7 @@ class Authform extends Component {
 
 		return(
 			<div className="row justify-content-center text-center">
-				<div className="col-12 col-md-6">
+				<div className="col-12 col-md-8">
 					<form onSubmit={this.handleSubmit}>
 						<h2>{heading}</h2>
 						{/* Show any errors */}
