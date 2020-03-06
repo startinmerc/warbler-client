@@ -214,6 +214,18 @@ Version logs for the entire project are below...
 * Change link color if not btn
 * Apply new fonts
 * Fix `#root` sizing issue & auto expand `<main>`
+* Swap `.btn`s to `.btn-outline`
+
+#### Landing Page
+* Clear old styling
+* Restyle new `Icon` position
+* Add `path-dashoffset` animation
+
+#### Authform
+* Swap elements to inline form
+* Style `.form-control`s
+* Add placeholders
+* Add prepend to username field
 
 ---
 
