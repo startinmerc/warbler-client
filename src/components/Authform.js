@@ -49,7 +49,7 @@ class Authform extends Component {
 			<div className="row justify-content-center text-center">
 				<div className="col-12 col-md-8">
 					<form onSubmit={this.handleSubmit}>
-						<h2>{heading}</h2>
+						<h2 className="mb-3">{heading}</h2>
 						{/* Show any errors */}
 						{errors.message && 
 							<div className="alert alert-danger">
