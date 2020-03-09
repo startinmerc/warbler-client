@@ -8,8 +8,8 @@ const Icon = ({size=48, color="", classes="", triangle=false}) => (
 		className={classes}>
 		<defs>
 			<linearGradient id="gradient">
-				<stop offset="5%" stop-color="var(--vw-yellow)" />
-				<stop offset="95%" stop-color="var(--vw-purple)" />
+				<stop offset="5%" stopColor="var(--vw-yellow)" />
+				<stop offset="95%" stopColor="var(--vw-purple)" />
 			</linearGradient>
 		</defs>
 		{triangle &&
