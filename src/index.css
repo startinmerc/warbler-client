@@ -194,7 +194,9 @@ form h2 {
 		var(--vw-purple),
 		var(--vw-pink),
 		var(--vw-yellow)
-	)
+	);
+	min-height: 80px;
+	height: 100%;
 }
 
 /*==========Responsive - Breakpoint MD==========*/
