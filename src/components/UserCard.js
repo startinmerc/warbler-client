@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "../images/Icon";
 import { Link } from "react-router-dom";
 
-const UserCard = ({profileImageUrl, username, userID}) => (
+const UserCard = ({profileImageUrl, username, userID, showForm}) => (
 	<div className="col-12 col-sm-3 col-md-2 mb-3">
 		<div className="card user-card">
 		{/* Show profile image, icon as fallback */}
@@ -18,9 +18,10 @@ const UserCard = ({profileImageUrl, username, userID}) => (
 			
 			<div className="card-body text-center p-1 p-lg-3">
 				<h5>@{username}</h5>
-			<Link className="btn btn-outline-success px-md-1 w-100 w-md-auto" to={`/users/${userID}/messages/new`}>
+			<button className="btn btn-outline-success px-md-1 w-100 w-md-auto" onClick={showForm}>
+			{/*to={`/users/${userID}/messages/new`}*/}
 				New Message
-			</Link>
+			</button>
 			</div>
 		</div>
 	</div>
