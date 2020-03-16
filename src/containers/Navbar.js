@@ -31,7 +31,7 @@ class Navbar extends Component {
 							Logged in as @{this.props.currentUser.user.username}
 						</li>
 						<li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
-							<Link className="btn btn-outline-success" to={`/users/${this.props.currentUser.user.id}/messages/new`}>
+							<Link className="btn btn-outline-success" to={"/new"}>
 								New Message
 							</Link>
 						</li>
