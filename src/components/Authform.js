@@ -47,7 +47,7 @@ class Authform extends Component {
 
 		return(
 			<div className="row justify-content-center text-center">
-				<div className="col-12 col-md-8">
+				<div className="col-12 col-md-10 col-lg-8">
 					<form onSubmit={this.handleSubmit}>
 						<h2 className="mb-3">{heading}</h2>
 						{/* Show any errors */}
@@ -57,16 +57,16 @@ class Authform extends Component {
 							</div>
 						}
 						<div className="form-group row">
-							<label htmlFor="email" className="col-sm-2 col-form-label text-right pr-0">Email:</label>
-							<div className="col-sm-10">
+							<label htmlFor="email" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Email:</label>
+							<div className="col-12 col-sm-10">
 								<input className="form-control" id="email" name="email"
 								 onChange={this.handleChange} value={email} type="email" placeholder="your@email.com"
 								 />
 							</div>
 						 </div>
 							 <div className="form-group row">
-							<label htmlFor="password" className="col-sm-2 col-form-label text-right pr-0">Password:</label>
-							<div className="col-sm-10">
+							<label htmlFor="password" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Password:</label>
+							<div className="col-12 col-sm-10">
 								<input className="form-control" id="password" name="password"
 								 onChange={this.handleChange} type="password" value={password} placeholder="password"
 								 />
@@ -76,8 +76,8 @@ class Authform extends Component {
 						{signUp && (
 							<>
 							<div className="form-group row">
-								<label htmlFor="username" className="col-sm-2 col-form-label text-right pr-0">Username:</label>
-								<div className="col-sm-10 input-group">
+								<label htmlFor="username" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Username:</label>
+								<div className="col-12 col-sm-10 input-group">
 									<div class="input-group-prepend">
 										<div class="input-group-text">@</div>
 									</div>
