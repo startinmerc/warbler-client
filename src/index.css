@@ -70,9 +70,7 @@ a:not(.btn):hover {
 /*=====================Hero=====================*/
 
 .home-hero {
-	height: 80vh;
-	margin-top: -1rem;
-	margin-bottom: -1rem;
+	height: 70vh;
 	position: relative;
 }
 
