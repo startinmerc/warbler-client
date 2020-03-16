@@ -1,43 +1,39 @@
-import React, { Component } from "react";
-import { connect, useHistory } from "react-redux";
+import React from "react";
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { postNewMessage } from "../store/actions/messages";
 
-class MessageFormModal extends Component {
+function MessageFormModal({errors, postNewMessage}) {
+	const [message, updateMessage] = React.useState("");
+	let history = useHistory();
 
-	constructor(props){
-		super(props);
-		this.state = {
-			message: ""
-		};
-	}
-
-	handleSubmit = e => {
+	function handleSubmit(e){
 		// Stop page refresh
 		e.preventDefault();
 		// Send API call through Redux
-		this.props.postNewMessage(this.state.message);
+		postNewMessage(message);
 		// Clear message
-		this.setState({message:""});
+		updateMessage("");
 		// Redirect to homepage
-		// this.props.history.push("/");
-		this.props.showForm();
+		history.push("/");
 	}
 
-	handleClick = e => {
+	function handleClick(e){
+		// Stop event propagation
 		e.stopPropagation();
-		this.props.showForm();
+		// Redirect to homepage (hide form)
+		history.push("/");
 	}
 
-	render(){
 		return(
 			<div className="message-form-modal__container">
-				<div className="message-form-modal__background" onClick={this.handleClick}></div>
-				<form onSubmit={this.handleSubmit} className="message-form-modal rounded p-3 bg-dark w-50 mx-auto mt-5">
+				<div className="message-form-modal__background" onClick={handleClick}></div>
+				<form onSubmit={handleSubmit} className="message-form-modal rounded p-3 bg-dark w-50 mx-auto mt-5">
 
 					{/* Show any errors */}
-					{this.props.errors.message && (
+					{errors.message && (
 						<div className="alert alert-danger">
-							{this.props.errors.message}
+							{errors.message}
 						</div>
 					)}
 					
@@ -50,22 +46,21 @@ class MessageFormModal extends Component {
 							maxLength="160"
 							type="text" 
 							className="form-control"
-							value={this.state.message}
+							value={message}
 							id="message"
 							name="message"
-							onChange={e => this.setState({message: e.target.value})}
+							onChange={e => updateMessage(e.target.value)}
 						/>
 						<small className="form-text text-muted">
-							{this.state.message.length}/160
+							{message.length}/160
 						</small>
 					</div>
-					<button type="submit" className="btn btn-outline-success btn-block" disabled={this.state.message.length < 1 ? "disabled" : null}>
+					<button type="submit" className="btn btn-outline-success btn-block" disabled={message.length < 1 ? "disabled" : null}>
 						Submit Message
 					</button>
 				</form>
 			</div>
 		)
-	}
 }
 
 function mapStateToProps(state){
