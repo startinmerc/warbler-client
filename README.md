@@ -234,11 +234,19 @@ Version logs for the entire project are below...
 #### Adspace
 * Style adspace column
 
+### V1.1
+
+#### MessageFormModal
+* Duplicate & style modal version of new message form
+* Add click handler to hide if shown
+* Create route to mount over MessageTimeline
+* Update links in UserCard + Navbar
+
 ---
 
 ### To Do:
 
 * Add isCorrectUser to MessageForm edit
 * Expand User to include profile text
-* Render in UserAside
-* Make User page include UserAside
+* Render User page as Timeline
+* Animate component lifecycles
