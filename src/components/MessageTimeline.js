@@ -4,7 +4,14 @@ import UserCard from "./UserCard";
 import MessageFormModal from "../containers/MessageFormModal";
 
 const MessageTimeline = props => {
-	const [newForm, setNewForm] = React.useState();
+	const [newForm, setNewForm] = React.useState(false);
+
+	React.useEffect(()=>{
+		if(props.newForm){
+			setNewForm(props.newForm)
+		}
+	}, [props.newForm]);
+
 	return (
 		<div className="row">
 			<UserCard profileImageUrl={props.profileImageUrl} username={props.username} userID={props.userID} showForm={setNewForm}/>

@@ -42,6 +42,7 @@ const Main = props => {
 					props => <MessageList fromUser="true" {...props} />
 				}/>
 
+				<Route path="/new" component={withAuth(Homepage, {newForm:true,...props})} />
 				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
 				<Route path="/users/:id/messages/:message_id/edit" component={
 					withAuth(MessageForm, {edit:true})} 

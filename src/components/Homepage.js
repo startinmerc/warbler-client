@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Icon from "../images/Icon";
 import MessageTimeline from "./MessageTimeline";
 
-const Homepage = ({ currentUser }) => {
+const Homepage = ({ currentUser, newForm }) => {
 	// Render default landing page if not logged in, else MessageTimeline
 	if(!currentUser.isAuthenticated){
 		return (
@@ -27,6 +27,7 @@ const Homepage = ({ currentUser }) => {
 				profileImageUrl={currentUser.user.profileImageUrl}
 				username={currentUser.user.username}
 				userID={currentUser.user.id}
+				newForm={newForm}
 				/>
 		);
 	}
