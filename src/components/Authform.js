@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loader from "./Loader";
 
 class Authform extends Component {
 	constructor(props) {
@@ -7,7 +8,8 @@ class Authform extends Component {
 			email: "",
 			username: "",
 			password: "",
-			profileImageUrl: ""
+			profileImageUrl: "",
+			isLoding: false
 		};
 	}
 
@@ -24,8 +26,16 @@ class Authform extends Component {
 		e.preventDefault();
 		// Find type of submit to send
 		const authType = this.props.signUp ? "signup" : "signin";
+		// Show loader
+		this.setState({
+			isLoading: true
+		});
 		// Dispatch API call via Redux
 		this.props.onAuth(authType, this.state).then(()=>{
+			// Hide loader
+			this.setState({
+				isLoading: false
+			});
 			// Redirect to homepage
 			this.props.history.push("/");
 		// Catch errors
@@ -101,6 +111,7 @@ class Authform extends Component {
 						</button>
 					</form>
 				</div>
+				<Loader isLoading={this.state.isLoading} text={"Logging In"} />
 			</div>
 		)
 	}
