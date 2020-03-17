@@ -242,6 +242,16 @@ Version logs for the entire project are below...
 * Create route to mount over MessageTimeline
 * Update links in UserCard + Navbar
 
+#### Loader
+* Create Loader component to show while awaiting API calls
+* Style with mounting & loading animation
+* Include in Authform & show with state
+
+#### Navbar
+* Convert to functional component
+* Add useHistory hook
+* Redirect to homepage on logout
+
 ---
 
 ### To Do:
