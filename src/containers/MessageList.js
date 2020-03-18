@@ -26,13 +26,13 @@ class MessageList extends Component {
 		let messageList = messages.map((m)=>(
 			<MessageItem
 				key={m._id}
-				date={m.createdAt}
+				createdAt={m.createdAt}
+				updatedAt={m.updatedAt}
 				text={m.text}
 				username={m.user.username}
 				profileImageUrl={m.user.profileImageUrl}
 				removeMessage={removeMessage.bind(this, m.user._id, m._id)}
 				isCorrectUser={currentUser === m.user._id}
-				isEdited={m.isEdited}
 				userId={m.user._id}
 				msgId={m._id}
 			/>

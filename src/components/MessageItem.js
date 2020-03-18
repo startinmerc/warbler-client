@@ -3,7 +3,7 @@ import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import Icon from "../images/Icon";
 
-const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCorrectUser, isEdited, userId, msgId}) => (
+const MessageItem = ({createdAt, updatedAt, profileImageUrl, text, username, removeMessage, isCorrectUser, userId, msgId}) => (
 	<li className="list-group-item message-item p-0">
 		{/* profile image or backup icon */}
 		{profileImageUrl ? (
@@ -18,10 +18,14 @@ const MessageItem = ({date, profileImageUrl, text, username, removeMessage, isCo
 		<div className="ml-2 message-item__content pl-3 py-2">
 			<Link to={`/users/${userId}/messages`}>@{username}</Link>
 			<Moment className="text-muted ml-2" fromNow>
-				{date}
+				{createdAt}
 			</Moment>
 			<p className="text-break">{text}</p>
-			{isEdited && (<small className="text-muted">(Message edited)</small>)}
+			{createdAt !== updatedAt && (
+				<small className="text-muted">
+					(Message edited <Moment format="DD/MM/YYYY">{updatedAt}</Moment>)
+				</small>
+			)}
 		</div>
 		{/* Show/hide buttons if author logged in */}
 		{isCorrectUser && (
