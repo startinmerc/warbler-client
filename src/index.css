@@ -111,6 +111,28 @@ a:not(.btn):hover {
 	}
 }
 
+/*============Landing SVG Background============*/
+
+.svg-grid line {
+	stroke-width: 5px;
+}
+
+.v-1 {animation: v1 3s linear infinite;}
+@keyframes v1 {to {transform: translateY(4%);}}
+.v-2 {animation: v2 3s linear infinite;}
+@keyframes v2 {to {transform: translateY(5%);}}
+.v-3 {animation: v3 3s linear infinite;}
+@keyframes v3 {to {transform: translateY(6%);}}
+.v-4 {animation: v4 3s linear infinite;}
+@keyframes v4 {to {transform: translateY(7%);}}
+.v-5 {animation: v5 3s linear infinite;}
+@keyframes v5 {to {transform: translateY(8%);}}
+.v-6 {animation: v6 3s linear infinite;}
+@keyframes v6 {to {transform: translateY(9%);}}
+.v-7 {animation: v7 3s linear infinite;}
+@keyframes v7 {to {transform: translateY(10%);}}
+
+
 /*===================Authform===================*/
 
 form h2 {
