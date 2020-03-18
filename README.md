@@ -252,11 +252,16 @@ Version logs for the entire project are below...
 * Add useHistory hook
 * Redirect to homepage on logout
 
+#### Homepage
+* Add LandingBackground (from Codepen)[https://codepen.io/startinmerc/pen/VwLdQmM]
+* CSS-in-JS for LandingBackground
+* Mount in Homepage
+* Add @keyframes for LandingBackground
+
 ---
 
 ### To Do:
 
-* Add isCorrectUser to MessageForm edit
 * Expand User to include profile text
 * Render User page as Timeline
 * Animate component lifecycles
