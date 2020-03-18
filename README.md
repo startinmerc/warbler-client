@@ -258,6 +258,11 @@ Version logs for the entire project are below...
 * Mount in Homepage
 * Add @keyframes for LandingBackground
 
+#### Messages
+* Render edited date in Message
+* Remove isEdited, compare createdAt & updatedAt instead
+* Remove isEdited from backend
+
 ---
 
 ### To Do:
