@@ -11,7 +11,7 @@ const UserProfile = props => {
 			</div>
 			<MessageList  fromUser="true" user={user} location={props.location}/>
 			<div className="col-12 col-md-2">
-				<div className="adspace sticky-top"/>
+				<div className="adspace"/>
 			</div>
 		</div>
 	)
