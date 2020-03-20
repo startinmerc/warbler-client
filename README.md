@@ -262,11 +262,19 @@ Version logs for the entire project are below...
 * Render edited date in Message
 * Remove isEdited, compare createdAt & updatedAt instead
 * Remove isEdited from backend
+* Responsive display of edit/delete buttons
+
+#### UserProfile
+* Create UserProfile container to show specific user's messages
+* Alter routes to reflect change
+* Link to UserProfile where username is mentioned
 
 ---
 
 ### To Do:
 
-* Expand User to include profile text
-* Render User page as Timeline
+* Add bio to User model
+* Render bio in UserCard, UserProfile
 * Animate component lifecycles
+* Redo UserProfile routing to username not id
+* Move Homepage to container, Landing as seperate component
