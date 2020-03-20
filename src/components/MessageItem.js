@@ -17,7 +17,7 @@ const MessageItem = ({createdAt, updatedAt, profileImageUrl, text, username, rem
 		}
 		<div className="ml-2 message-item__content pl-3 py-2 d-flex flex-column justify-content-between">
 			<p className="mb-0">
-				<Link to={`/users/${userId}/messages`}>@{username}</Link>
+				<Link to={`/users/${userId}`}>@{username}</Link>
 				<Moment className="text-muted ml-2" fromNow>
 					{createdAt}
 				</Moment>

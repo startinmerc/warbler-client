@@ -7,7 +7,8 @@ import { logOut } from "../store/actions/auth";
 function Navbar(props) {
 
 	const history = useHistory();
-
+	const { user, isAuthenticated } = props.currentUser;
+	
 	function logOut(e) {
 		e.preventDefault();
 		props.logOut();
@@ -28,9 +29,9 @@ function Navbar(props) {
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav ml-auto">
 				{/*Only show messages, user card if logged in*/}
-				{props.currentUser.isAuthenticated ? (
+				{isAuthenticated ? (
 					<><li className="nav-item mr-0 mr-md-3 my-1 my-md-auto text-white text-center text-md-left">
-						Logged in as @{props.currentUser.user.username}
+						Logged in as <Link to={`/users/${user.id}`}>@{user.username}</Link>
 					</li>
 					<li className="nav-item mr-0 mr-md-3 my-1 my-md-0">
 						<Link className="btn btn-outline-success" to={"/new"}>
