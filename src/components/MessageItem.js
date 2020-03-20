@@ -15,12 +15,14 @@ const MessageItem = ({createdAt, updatedAt, profileImageUrl, text, username, rem
 				<Icon classes="message-item__image py-3 pl-3" size="100px" color="var(--white)"/>
 			)
 		}
-		<div className="ml-2 message-item__content pl-3 py-2">
-			<Link to={`/users/${userId}/messages`}>@{username}</Link>
-			<Moment className="text-muted ml-2" fromNow>
-				{createdAt}
-			</Moment>
-			<p className="text-break">{text}</p>
+		<div className="ml-2 message-item__content pl-3 py-2 d-flex flex-column justify-content-between">
+			<p className="mb-0">
+				<Link to={`/users/${userId}/messages`}>@{username}</Link>
+				<Moment className="text-muted ml-2" fromNow>
+					{createdAt}
+				</Moment>
+			</p>
+			<p className="text-break mb-0 flex-grow-1">{text}</p>
 			{createdAt !== updatedAt && (
 				<small className="text-muted">
 					(Message edited <Moment format="DD/MM/YYYY">{updatedAt}</Moment>)
