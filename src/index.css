@@ -280,4 +280,8 @@ form h2 {
 	.icon--hero {
 		top: 5%;
 	}
+	.btn-container {
+		position: relative;
+		opacity: 1;
+	}
 }
