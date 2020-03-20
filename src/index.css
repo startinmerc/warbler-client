@@ -186,6 +186,7 @@ form h2 {
 	border: 2px solid var(--white);
 	background-color: rgba(255,255,255,0.1);
 	min-height: 120px;
+	transition: background-color 120ms ease-in;
 }
 
 .message-item:nth-of-type(even){
@@ -209,8 +210,13 @@ form h2 {
 	top: 0;
 }
 
+.message-item:hover,
+.message-item:focus-within {
+	background-color: rgba(0,0,0,0.1);
+}
+
 .message-item:hover .btn-container,
- .message-item:focus-within .btn-container {
+.message-item:focus-within .btn-container {
 	opacity: 1;
 }
 
