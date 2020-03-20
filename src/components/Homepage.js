@@ -16,7 +16,7 @@ const Homepage = ({ currentUser, newForm }) => {
 					<h4>Welcome to</h4>
 					<h1>Warbler</h1>
 				</div>
-				<div className="container d-flex flex-column align-items-center">
+				<div className="container d-flex flex-column align-items-center mt-5">
 					<p>New around here?</p>
 					<Link to="/signup" className="btn btn-success">
 						Sign up!

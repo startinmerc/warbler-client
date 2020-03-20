@@ -238,8 +238,7 @@ form h2 {
 		var(--vw-pink),
 		var(--vw-yellow)
 	);
-	min-height: 80px;
-	height: 100%;
+	min-height: 80vh;
 }
 
 /*================MessagFormModal================*/
