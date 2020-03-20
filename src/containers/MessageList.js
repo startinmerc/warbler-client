@@ -16,9 +16,8 @@ class MessageList extends Component {
 		let messages = this.props.messages;
 		// Filter messages if user_id supplied
 		if(fromUser){
-			const fromID = this.props.location.pathname.split("/")[2];
 			messages = this.props.messages.filter(message => (
-				message.user._id === fromID
+				message.user._id === this.props.user
 			))
 		};
 
@@ -38,10 +37,10 @@ class MessageList extends Component {
 			/>
 			));
 		return (
-			<div className="col-12 col-sm-9 col-md-8">
-			<ul className="list-group" id="messages">
-				{messageList}
-			</ul>
+			<div className={fromUser ? "col-12 col-md-10" : "col-12 col-sm-9 col-md-8"}>
+				<ul className="list-group" id="messages">
+					{messageList}
+				</ul>
 			</div>
 		);
 	}
