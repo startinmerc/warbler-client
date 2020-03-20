@@ -204,10 +204,8 @@ form h2 {
 .btn-container {
 	opacity: 0;
 	transition: opacity 120ms ease-in;
-	position: absolute;
 	right: 0;
-	display: flex;
-	justify-content: center;
+	position: absolute;
 	top: 0;
 }
 

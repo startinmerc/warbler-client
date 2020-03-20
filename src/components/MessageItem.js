@@ -28,10 +28,9 @@ const MessageItem = ({createdAt, updatedAt, profileImageUrl, text, username, rem
 					(Message edited <Moment format="DD/MM/YYYY">{updatedAt}</Moment>)
 				</small>
 			)}
-		</div>
-		{/* Show/hide buttons if author logged in */}
-		{isCorrectUser && (
-			<div className="btn-container">
+			{/* Show/hide buttons if author logged in */}
+			{isCorrectUser && (
+			<div className="btn-container d-flex flex-row justify-content-end justify-content-lg-center">
 				<Link to={`/users/${userId}/messages/${msgId}/edit`} 
 				 className="btn btn-outline-warning message-item__btn mt-2 mr-2 py-0">
 					Edit
