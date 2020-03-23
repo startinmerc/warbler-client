@@ -88,8 +88,8 @@ class Authform extends Component {
 							<div className="form-group row">
 								<label htmlFor="username" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Username:</label>
 								<div className="col-12 col-sm-10 input-group">
-									<div class="input-group-prepend">
-										<div class="input-group-text">@</div>
+									<div className="input-group-prepend">
+										<div className="input-group-text">@</div>
 									</div>
 									<input className="form-control" id="username" name="username"
 									 onChange={this.handleChange} value={username} type="text" placeholder="your-desired-username"

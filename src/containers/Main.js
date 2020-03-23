@@ -17,7 +17,7 @@ const Main = props => {
 				<Route exact path="/" render={
 					props => <Homepage currentUser={currentUser} {...props}/>
 				} />
-				<Route exact path="/signin" render={
+				<Route path="/signin" render={
 					props => <Authform
 						removeError={removeError}
 						errors={errors}
@@ -27,7 +27,7 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-				<Route exact path="/signup" render={
+				<Route path="/signup" render={
 					props => <Authform
 						signUp
 						removeError={removeError}
@@ -38,7 +38,7 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-				<Route exact path="/users/:id/" component={UserProfile}/>
+				<Route path="/users/:id/" component={UserProfile}/>
 
 				<Route path="/new" component={withAuth(Homepage, {newForm:true,...props})} />
 				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
