@@ -20,7 +20,7 @@ The site is built on a Node/Express API with a Mongo database, with React/Redux 
 
 It makes extensive use of Redux for API interactions and authentification, and Bootstrap for a base UI to build off.
 
-Current features are user signup & signin, message creation and deletion, with full RESTful routing a main goal.
+Current features are user signup & signin and RESTful message routing, with full RESTful routing a main goal.
 
 Version logs for the entire project are below...
 
@@ -268,13 +268,20 @@ Version logs for the entire project are below...
 * Create UserProfile container to show specific user's messages
 * Alter routes to reflect change
 * Link to UserProfile where username is mentioned
+* Add getUser route to backend
+* Add user actions, reducers
+* Change UserProfile to class to use DidMount
+* Populate UserProfile user info from getOneUser
+
+#### User Bio
+* Add bio to User schema
 
 ---
 
 ### To Do:
 
-* Add bio to User model
-* Render bio in UserCard, UserProfile
+* Render bio in UserCard/Profile
+* Sticky navbar, fill bg on scroll
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
 * Move Homepage to container, Landing as seperate component
