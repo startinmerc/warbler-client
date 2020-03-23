@@ -285,3 +285,4 @@ Version logs for the entire project are below...
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
 * Move Homepage to container, Landing as seperate component
+* Catch 404s!
