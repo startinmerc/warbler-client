@@ -37,6 +37,10 @@ a:not(.btn):hover {
 	color: var(--vw-pink);
 }
 
+.white-border {
+	border: 2px solid var(--white);
+}
+
 /*================Navbar Styling================*/
 
 .navbar-brand {
@@ -157,7 +161,6 @@ form h2 {
 
 .loader {
 	position: absolute;
-	border: 2px solid var(--white);
 	transform: scale(0);
 	transform-origin: center;
 	animation: loader-appear 290ms ease-in-out;
@@ -183,7 +186,6 @@ form h2 {
 .message-item {
 	display: grid;
 	grid-template-columns: 100px auto;
-	border: 2px solid var(--white);
 	background-color: rgba(255,255,255,0.1);
 	min-height: 120px;
 	transition: background-color 120ms ease-in;
@@ -224,7 +226,6 @@ form h2 {
 
 .user-card {
 	background-color: rgba(255,255,255,0.1);
-	border: 2px solid var(--white);
 }
 
 .user-card .card-body {
@@ -235,7 +236,6 @@ form h2 {
 
 .adspace {
 	border-radius: 0.25rem;
-	border: 2px solid var(--white);
 	background: linear-gradient(
 		45deg,
 		var(--vw-green),
