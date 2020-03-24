@@ -247,7 +247,7 @@ form h2 {
 	min-height: 80vh;
 }
 
-/*================MessagFormModal================*/
+/*================Modal Form================*/
 
 .modal-form__container {
 	position: absolute;
@@ -268,8 +268,10 @@ form h2 {
 	z-index: -1;
 }
 
-.modal-form {
-	border: 2px solid var(--white);
+/*=================User Profile=================*/
+
+.edit-profile-button {
+	width: 100px;
 }
 
 /*==========Responsive - Breakpoint MD==========*/
@@ -288,5 +290,8 @@ form h2 {
 	.btn-container {
 		position: relative;
 		opacity: 1;
+	}
+	.edit-profile-button {
+		width: 100%;
 	}
 }
