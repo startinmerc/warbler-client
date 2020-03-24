@@ -27,3 +27,12 @@ export const fetchOneUser = (user_id) => {
 			.catch(err => dispatch(addError(err.message)));
 	};
 };
+
+export const editUser = (user_id, userData) => {
+	debugger
+	return dispatch => {
+		return apiCall("put", `/api/users/${user_id}`, userData)
+			.then(res => {})
+			.catch(err => dispatch(addError(err.message)));
+	};
+};
