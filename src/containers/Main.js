@@ -39,14 +39,14 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-				<Route path="/users/:id/edit" render={
+	{/*			<Route path="/users/:id/edit" render={
 					props => <EditProfileModal
 						removeError={removeError}
 						errors={errors}
 						onAuth={authUser}
 						{...props}
 						/>
-				}/>
+				}/>*/}
 
 				
 				<Route path="/new" component={withAuth(Homepage, {newForm:true,...props})} />
@@ -54,7 +54,18 @@ const Main = props => {
 					withAuth(MessageForm, {edit:true})} 
 				/>
 				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
-				<Route path="/users/:id/" component={UserProfile}/>
+				<Route path="/users/:id/edit" component={
+					withAuth(UserProfile, {
+						edit:true,
+						removeError: removeError,
+						errors: errors,
+						onAuth: authUser,
+						currentUser: currentUser,
+						...props
+					})
+				}/>
+				<Route path="/users/:id/" render={props => 
+					<UserProfile currentUser={currentUser} {...props}/>}/>
 			</Switch>
 		</main>
 	)
