@@ -3,6 +3,7 @@ import { Switch, Route, withRouter } from "react-router";
 import { connect } from "react-redux";
 import Homepage from "../components/Homepage";
 import Authform from "../components/Authform";
+import EditProfileModal from "../components/EditProfileModal";
 import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
@@ -38,13 +39,22 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-				<Route path="/users/:id/" component={UserProfile}/>
+				<Route path="/users/:id/edit" render={
+					props => <EditProfileModal
+						removeError={removeError}
+						errors={errors}
+						onAuth={authUser}
+						{...props}
+						/>
+				}/>
 
+				
 				<Route path="/new" component={withAuth(Homepage, {newForm:true,...props})} />
-				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
 				<Route path="/users/:id/messages/:message_id/edit" component={
 					withAuth(MessageForm, {edit:true})} 
 				/>
+				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
+				<Route path="/users/:id/" component={UserProfile}/>
 			</Switch>
 		</main>
 	)
