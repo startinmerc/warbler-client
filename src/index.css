@@ -249,7 +249,7 @@ form h2 {
 
 /*================MessagFormModal================*/
 
-.message-form-modal__container {
+.modal-form__container {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -258,7 +258,7 @@ form h2 {
 	z-index: 3;
 }
 
-.message-form-modal__background {
+.modal-form__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -268,7 +268,7 @@ form h2 {
 	z-index: -1;
 }
 
-.message-form-modal {
+.modal-form {
 	border: 2px solid var(--white);
 }
 

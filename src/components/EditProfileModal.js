@@ -90,9 +90,9 @@ class EditProfileModular extends Component {
 		});
 
 		return(
-			<div className="row justify-content-center text-center">
-				<div className="message-form-modal__background" onClick={this.handleClick}></div>
-				<form onSubmit={this.handleSubmit}>
+			<div className="modal-form__container">
+				<div className="modal-form__background" onClick={this.handleClick}></div>
+				<form className="modal-form rounded p-3 bg-dark w-100 w-md-50 mx-auto mt-5" onSubmit={this.handleSubmit}>
 					<h2 className="mb-3">Edit Profile</h2>
 					{/* Show any errors */}
 					{errors.message && 
