@@ -80,7 +80,7 @@ class EditProfileModular extends Component {
 
 	render(){
 		// Deconstruct input fields from state
-		const { email, username, password, profileImageUrl, bio } = this.state;
+		const { username, profileImageUrl, bio } = this.state;
 		// Deconstruct props, including redux state
 		const { errors, removeError } = this.props;
 		
