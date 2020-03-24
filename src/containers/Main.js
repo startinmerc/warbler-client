@@ -18,6 +18,7 @@ const Main = props => {
 				<Route exact path="/" render={
 					props => <Homepage currentUser={currentUser} {...props}/>
 				} />
+
 				<Route path="/signin" render={
 					props => <Authform
 						removeError={removeError}
@@ -39,15 +40,6 @@ const Main = props => {
 						{...props}
 					/>
 				} />
-	{/*			<Route path="/users/:id/edit" render={
-					props => <EditProfileModal
-						removeError={removeError}
-						errors={errors}
-						onAuth={authUser}
-						{...props}
-						/>
-				}/>*/}
-
 				
 				<Route path="/new" component={withAuth(Homepage, {newForm:true,...props})} />
 				<Route path="/users/:id/messages/:message_id/edit" component={

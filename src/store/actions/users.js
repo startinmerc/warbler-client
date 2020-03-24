@@ -29,7 +29,6 @@ export const fetchOneUser = (user_id) => {
 };
 
 export const editUser = (user_id, userData) => {
-	debugger
 	return dispatch => {
 		return apiCall("put", `/api/users/${user_id}`, userData)
 			.then(res => {})

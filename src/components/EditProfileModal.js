@@ -150,8 +150,6 @@ function mapStateToProps(state){
 	};
 };
 
-// export default connect(mapStateToProps, { fetchOneUser, editUser })(EditProfileModular);
-
 export default compose(
   withRouter,
   connect(mapStateToProps, { fetchOneUser, editUser})
