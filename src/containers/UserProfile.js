@@ -26,7 +26,8 @@ class UserProfile extends React.Component {
 			<div className="row">
 				<div className="col-12 col-md-10">
 					<div className="text-center">
-						Showing messages from {this.state.user.username}
+						<h2>@{this.state.user.username}</h2>
+						<p>{this.state.user.bio}</p>
 					</div>
 					<MessageList fromUser="true" user={this.state.user._id} />
 				</div>

@@ -18,6 +18,7 @@ const UserCard = ({profileImageUrl, username, userID, userBio, showForm}) => (
 			
 			<div className="card-body text-center p-1 p-lg-3">
 				<h5><Link to={`/users/${userID}`}>@{username}</Link></h5>
+				<p>{userBio}</p>
 			<Link className="btn btn-outline-success px-md-1 w-100 w-md-auto" to={`/new`}>
 				New Message
 			</Link>
