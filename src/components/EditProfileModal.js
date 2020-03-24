@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { compose } from "redux";
+import { withRouter } from "react-router-dom";
 import Loader from "./Loader";
 import { fetchOneUser, editUser } from "../store/actions/users";
 
@@ -148,4 +150,9 @@ function mapStateToProps(state){
 	};
 };
 
-export default connect(mapStateToProps, { fetchOneUser, editUser })(EditProfileModular);
+// export default connect(mapStateToProps, { fetchOneUser, editUser })(EditProfileModular);
+
+export default compose(
+  withRouter,
+  connect(mapStateToProps, { fetchOneUser, editUser})
+)(EditProfileModular);
