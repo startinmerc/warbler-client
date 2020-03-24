@@ -63,8 +63,8 @@ class EditProfileModular extends Component {
 			this.setState({
 				isLoading: false
 			});
-			// Redirect to homepage
-			this.props.history.push("/");
+			// Redirect back to UserProfile
+			this.props.history.goBack();
 		// Catch errors
 		}).catch(()=>{
 			return;
@@ -74,8 +74,8 @@ class EditProfileModular extends Component {
 	handleClick = (e) => {
 		// Stop event propagation
 		e.stopPropagation();
-		// Redirect to homepage (hide form)
-		this.props.history.push("/");
+		// Go back to UserProfile
+		this.props.history.goBack();
 	}
 
 	render(){
