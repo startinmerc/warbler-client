@@ -138,7 +138,7 @@ class EditProfileModular extends Component {
 						Save Changes
 					</button>
 				</form>
-				<Loader isLoading={this.state.isLoading} text={"Logging In"} />
+				<Loader isLoading={this.state.isLoading} text={"Saving"} />
 			</div>
 		)
 	}
