@@ -9,7 +9,7 @@ class Authform extends Component {
 			username: "",
 			password: "",
 			profileImageUrl: "",
-			isLoding: false
+			isLoading: false
 		};
 	}
 
