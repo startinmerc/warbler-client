@@ -264,23 +264,36 @@ Version logs for the entire project are below...
 * Remove isEdited from backend
 * Responsive display of edit/delete buttons
 
+### V1.2
+
 #### UserProfile
 * Create UserProfile container to show specific user's messages
 * Alter routes to reflect change
 * Link to UserProfile where username is mentioned
+
+#### getUser Route
 * Add getUser route to backend
 * Add user actions, reducers
+
+#### UserProfile Pt.2
 * Change UserProfile to class to use DidMount
 * Populate UserProfile user info from getOneUser
 
-#### User Bio
-* Add bio to User schema
+#### editUser
+* Add editUSer route to backend
+* Add editUser action
+* Create EditUser component
+ * Populate form
+ * Handle submit
+
+#### User bio
+* Add bio to User schema w/ length limit
+* Add bio to UserCard + UserProfile
 
 ---
 
 ### To Do:
 
-* Render bio in UserCard/Profile
 * Sticky navbar, fill bg on scroll
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
