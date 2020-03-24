@@ -28,7 +28,7 @@ function MessageFormModal({errors, postNewMessage}) {
 		return(
 			<div className="modal-form__container">
 				<div className="modal-form__background" onClick={handleClick}></div>
-				<form onSubmit={handleSubmit} className="white-border rounded p-3 bg-dark w-100 w-md-50 mx-auto mt-5">
+				<form onSubmit={handleSubmit} className="white-border rounded p-3 bg-dark w-75 mx-auto mt-5">
 
 					{/* Show any errors */}
 					{errors.message && (
