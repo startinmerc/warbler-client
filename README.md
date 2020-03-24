@@ -290,10 +290,24 @@ Version logs for the entire project are below...
 * Add bio to User schema w/ length limit
 * Add bio to UserCard + UserProfile
 
+#### EditUserModal
+* Refactor modal classes from MessageFormModal
+* Use in EditUserModal
+* Change routing from Main
+* Add EditProfileModal to UserProfile
+ * Add to state
+* Conditionally render edit profile button in UserProfile
+
+#### UserProfile Pt.3
+* Style UserProfile header
+
 ---
 
 ### To Do:
 
+* PopUser as global async function
+ * Use in UserCard
+* Display errors (Header?)
 * Sticky navbar, fill bg on scroll
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
