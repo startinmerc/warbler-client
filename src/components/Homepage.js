@@ -31,6 +31,7 @@ const Homepage = ({ currentUser, newForm }) => {
 				profileImageUrl={currentUser.user.profileImageUrl}
 				username={currentUser.user.username}
 				userID={currentUser.user.id}
+				userBio={currentUser.user.bio}
 				newForm={newForm}
 				/>
 		);

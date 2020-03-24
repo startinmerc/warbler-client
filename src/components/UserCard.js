@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "../images/Icon";
 import { Link } from "react-router-dom";
 
-const UserCard = ({profileImageUrl, username, userID, showForm}) => (
+const UserCard = ({profileImageUrl, username, userID, userBio, showForm}) => (
 	<div className="col-12 col-sm-3 col-md-2 mb-3">
 		<div className="card user-card">
 		{/* Show profile image, icon as fallback */}

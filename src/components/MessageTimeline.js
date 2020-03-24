@@ -14,7 +14,7 @@ const MessageTimeline = props => {
 
 	return (
 		<div className="row">
-			<UserCard profileImageUrl={props.profileImageUrl} username={props.username} userID={props.userID} showForm={setNewForm}/>
+			<UserCard profileImageUrl={props.profileImageUrl} username={props.username} userID={props.userID} userBio={props.userBio} showForm={setNewForm}/>
 			<MessageList />
 			<div className="col-12 col-md-2 mt-3 mt-md-0">
 				<div className="adspace"/>
