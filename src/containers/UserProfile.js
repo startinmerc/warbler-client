@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import MessageList from "./MessageList";
+import { Link } from "react-router-dom";
+import EditProfileModal from "../components/EditProfileModal";
 import { fetchOneUser } from "../store/actions/users";
 
 class UserProfile extends React.Component {
@@ -8,7 +10,8 @@ class UserProfile extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			user: {}
+			user: {},
+			edit: false
 		}
 	}
 
@@ -19,7 +22,12 @@ class UserProfile extends React.Component {
 
 	componentDidMount(){
 		this.popUser();
-	}
+		if(this.props.edit){
+			this.setState({
+				edit: true
+			});
+		};
+	};
 	
 	render(){
 		return (
@@ -28,12 +36,21 @@ class UserProfile extends React.Component {
 					<div className="text-center">
 						<h2>@{this.state.user.username}</h2>
 						<p>{this.state.user.bio}</p>
+						{this.props.currentUser.user.id === this.state.user._id && 
+							<Link className="btn btn-outline-warning" to={`${this.props.location.pathname}/edit`}>button</Link>
+						}
 					</div>
 					<MessageList fromUser="true" user={this.state.user._id} />
 				</div>
 				<div className="col-12 col-md-2">
-					<div className="adspace"/>
+					<div className="adspace"></div>
 				</div>
+				{this.state.edit && <EditProfileModal
+				 showForm={this.handleClick}
+				 removeError={this.props.removeError}
+				 errors={this.props.errors}
+				 onAuth={this.props.authUser}
+				 />}
 			</div>
 		)
 	}
