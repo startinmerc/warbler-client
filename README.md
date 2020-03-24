@@ -311,5 +311,5 @@ Version logs for the entire project are below...
 * Sticky navbar, fill bg on scroll
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
-* Move Homepage to container, Landing as seperate component
+* Move containers & components around to make more sense
 * Catch 404s!
