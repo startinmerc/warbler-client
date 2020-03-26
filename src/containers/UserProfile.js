@@ -5,14 +5,12 @@ import EditProfileModal from "../components/EditProfileModal";
 import { fetchOneUser } from "../store/actions/users";
 import UserProfileHeader from "../components/UserProfileHeader";
 
-class UserProfile extends React.PureComponent {
+class UserProfile extends React.Component {
 
 	constructor(props){
 		super(props);
 		this.state = {
-			profileImageUrl: "",
-			username: "",
-			bio: "",
+			user: {},
 			edit: false
 		}
 	}
@@ -46,7 +44,7 @@ class UserProfile extends React.PureComponent {
 		return (
 			<div className="row">
 				<div className="col-12 col-md-10">
-					<UserProfileHeader isCorrectUser={isCorrectUser} user={this.state.user} url={`${id}/edit`}/>
+					<UserProfileHeader isCorrectUser={isCorrectUser} user={this.state.user} url={`${id}/edit/`}/>
 					<MessageList fromUser="true" user={id} />
 				</div>
 				<div className="col-12 col-md-2">
