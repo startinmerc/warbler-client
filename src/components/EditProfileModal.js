@@ -20,7 +20,7 @@ class EditProfileModular extends Component {
 		// API to get user data from id in URL
 		await this.props.fetchOneUser(this.props.location.pathname.split("/")[2]);
 		// Destructure user prop
-		const { email,username,password,profileImageUrl,bio,_id } = this.props.foundUser;
+		const { username,profileImageUrl,bio,_id } = this.props.foundUser;
 		// Set as state
 		this.setState({
 			username,
