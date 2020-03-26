@@ -5,12 +5,14 @@ import EditProfileModal from "../components/EditProfileModal";
 import { fetchOneUser } from "../store/actions/users";
 import UserProfileHeader from "../components/UserProfileHeader";
 
-class UserProfile extends React.Component {
+class UserProfile extends React.PureComponent {
 
 	constructor(props){
 		super(props);
 		this.state = {
-			user: {},
+			profileImageUrl: "",
+			username: "",
+			bio: "",
 			edit: false
 		}
 	}
