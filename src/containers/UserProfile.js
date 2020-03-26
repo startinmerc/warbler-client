@@ -29,12 +29,6 @@ class UserProfile extends React.Component {
 	componentDidMount(){
 		// Call async populate user
 		this.popUser();
-		// If edit prop, set state of edit to true
-		if(this.props.edit){
-			this.setState({
-				edit: true
-			});
-		};
 	};
 
 	render(){
@@ -50,13 +44,6 @@ class UserProfile extends React.Component {
 				<div className="col-12 col-md-2">
 					<div className="adspace white-border"></div>
 				</div>
-				{/*Mount EditProfileModal if required, passing props*/}
-				{this.state.edit && <EditProfileModal
-				 showForm={this.handleClick}
-				 removeError={this.props.removeError}
-				 errors={this.props.errors}
-				 onAuth={this.props.authUser}
-				 />}
 			</div>
 		)
 	}

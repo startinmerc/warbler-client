@@ -8,6 +8,7 @@ import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
 import MessageForm from "../containers/MessageForm";
 import UserProfile from "../containers/UserProfile";
+import EditProfileModal from "../components/EditProfileModal";
 
 const Main = props => {
 	const { authUser, errors, removeError, currentUser } = props;
@@ -45,7 +46,7 @@ const Main = props => {
 					withAuth(MessageForm, {edit:true})}/>
 				<Route path="/users/:id/messages/new" component={withAuth(MessageForm)}/>
 				<Route path="/users/:id/edit/" component={
-					withAuth(UserProfile, {edit:true,...props})}/>
+					withAuth(EditProfileModal, {...props})}/>
 				<Route path="/users/:id/" component={props => (
 					<UserProfile currentUser={currentUser} {...props}/>
 					)}/>
