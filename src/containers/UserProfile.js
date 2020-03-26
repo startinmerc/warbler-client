@@ -15,6 +15,10 @@ class UserProfile extends React.Component {
 		}
 	}
 
+	static defaultProps = {
+		foundUser: {profileImageUrl:"", username:"", bio:""}
+	}
+
 	async popUser(){
 		// API call to get user data from id in URL
 		await this.props.fetchOneUser(this.props.match.params.id);
