@@ -300,6 +300,8 @@ Version logs for the entire project are below...
 
 #### UserProfile Pt.3
 * Style UserProfile header
+* Refactor UserProfileHeader as seperate Component
+* Remove EditUser from UserProfile, mount independently
 
 ---
 
