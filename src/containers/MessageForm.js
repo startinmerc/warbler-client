@@ -17,7 +17,7 @@ class MessageForm extends React.Component {
 		// Find message in messages
 		const foundMessage = this.props.messages.find(
 			// ID extracted from pathname
-			message => message._id === this.props.match.params.id;
+			message => message._id === this.props.match.params.message_id);
 		// Set found message in state
 		this.setState({message: foundMessage.text});
 	}
