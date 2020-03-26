@@ -54,10 +54,10 @@ class UserProfile extends React.Component {
 							<p>{this.state.user.bio}</p>
 						</div>
 						{/*Show edit profile link if user is correct*/}
-						{this.props.currentUser.user.id === this.state.user._id && 
+						{this.props.currentUser.user.id === this.state.user._id ? 
 							<Link className="btn btn-outline-warning align-self-center edit-profile-button" 
 							 to={`${this.props.location.pathname}/edit`}
-							 >Edit Profile</Link>
+							 >Edit Profile</Link> : <div style={{width: "100px"}}></div>
 						}
 					</div>
 					<MessageList fromUser="true" user={this.state.user._id} />
