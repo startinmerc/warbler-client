@@ -131,7 +131,7 @@ class EditProfileModular extends Component {
 							 />
 						</div>
 						<small className="form-text text-muted">
-							{bio.length}/160
+							{bio ? this.state.bio.length : "0"}/160
 						</small>
 					</div>
 					<button type="submit" className="btn btn-outline-success btn-block btn-lg mt-3">
