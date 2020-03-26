@@ -18,7 +18,7 @@ class UserProfile extends React.Component {
 
 	async popUser(){
 		// API call to get user data from id in URL
-		await this.props.fetchOneUser(this.props.location.pathname.split("/")[2]);
+		await this.props.fetchOneUser(this.props.match.params.id);
 		// Add found user to state
 		this.setState({user: this.props.foundUser});
 	}
@@ -60,7 +60,7 @@ class UserProfile extends React.Component {
 							 >Edit Profile</Link> : <div style={{width: "100px"}}></div>
 						}
 					</div>
-					<MessageList fromUser="true" user={this.state.user._id} />
+					<MessageList fromUser="true" user={this.props.match.params.id} />
 				</div>
 				<div className="col-12 col-md-2">
 					<div className="adspace white-border"></div>
