@@ -1,14 +1,14 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router";
 import { connect } from "react-redux";
-import Homepage from "../components/Homepage";
-import Authform from "../components/Authform";
 import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
-import MessageForm from "../containers/MessageForm";
+import Homepage from "../containers/Homepage";
+import MessageForm from "../components/MessageForm";
 import UserProfile from "../containers/UserProfile";
 import EditProfileModal from "../components/EditProfileModal";
+import Authform from "../components/Authform";
 
 const Main = props => {
 	const { authUser, errors, removeError, currentUser } = props;

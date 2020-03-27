@@ -1,6 +1,6 @@
 import React from "react";
 import MessageTimeline from "./MessageTimeline";
-import LandingPage from "./LandingPage";
+import LandingPage from "../components/LandingPage";
 
 const Homepage = ({ currentUser, newForm }) => {
 	// Render default landing page if not logged in, else MessageTimeline

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import MessageList from "./MessageList";
-import EditProfileModal from "../components/EditProfileModal";
 import { fetchOneUser } from "../store/actions/users";
 import UserProfileHeader from "../components/UserProfileHeader";
+import Adspace from "../components/Adspace";
 
-class UserProfile extends React.Component {
+class UserProfile extends Component {
 
 	constructor(props){
 		super(props);
@@ -41,9 +41,7 @@ class UserProfile extends React.Component {
 					<UserProfileHeader isCorrectUser={isCorrectUser} user={this.state.user} url={`${id}/edit/`}/>
 					<MessageList fromUser="true" user={id} />
 				</div>
-				<div className="col-12 col-md-2">
-					<div className="adspace white-border"></div>
-				</div>
+				<Adspace />
 			</div>
 		)
 	}
