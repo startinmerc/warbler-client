@@ -303,6 +303,10 @@ Version logs for the entire project are below...
 * Refactor UserProfileHeader as seperate Component
 * Remove EditUser from UserProfile, mount independently
 
+#### Container/Component
+* Move components around to make more sense
+* Refactor LandingPage & Adspace
+
 ---
 
 ### To Do:
@@ -313,6 +317,5 @@ Version logs for the entire project are below...
 * Sticky navbar, fill bg on scroll
 * Animate component lifecycles
 * Redo UserProfile routing to username not id
-* Move containers & components around to make more sense
 * Catch 404s!
 * checkcurrentuser in editprofile
