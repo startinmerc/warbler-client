@@ -93,7 +93,7 @@ class EditProfileModular extends Component {
 			<div className="modal-form__container">
 				<div className="modal-form__background" onClick={this.handleClick}></div>
 				<form className="white-border rounded p-3 bg-dark w-75 mx-auto mt-5" onSubmit={this.handleSubmit}>
-					<h2 className="mb-3">Edit Profile</h2>
+					<h2 className="mb-3 text-center">Edit Profile</h2>
 					{/* Show any errors */}
 					{errors.message && 
 						<div className="alert alert-danger">
@@ -114,7 +114,7 @@ class EditProfileModular extends Component {
 					</div>
 
 					<div className="form-group row">
-						<label htmlFor="profileImageUrl" className="col-sm-2 col-form-label text-right pr-0">Image URL:</label>
+						<label htmlFor="profileImageUrl" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Image URL:</label>
 						<div className="col-sm-10">
 							<input className="form-control" id="profileImageUrl" name="profileImageUrl"
 							 onChange={this.handleChange} value={profileImageUrl} type="text"
@@ -123,7 +123,7 @@ class EditProfileModular extends Component {
 					</div>
 
 					<div className="form-group row">
-						<label htmlFor="bio" className="col-sm-2 col-form-label text-right pr-0">Bio:</label>
+						<label htmlFor="bio" className="col-12 col-sm-2 col-form-label text-center text-md-right pr-0">Bio:</label>
 						<div className="col-sm-10">
 							<textarea className="form-control" id="bio" name="bio"
 							 onChange={this.handleChange} value={bio} type="text"
