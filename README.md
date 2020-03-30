@@ -311,6 +311,7 @@ Version logs for the entire project are below...
 
 ### To Do:
 
+* UserProfile is mounting a fuckton - why?
 * PopUser as global async function
  * Use in UserCard
 * Display errors (Header?)

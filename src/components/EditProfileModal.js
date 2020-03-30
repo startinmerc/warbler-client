@@ -63,8 +63,8 @@ class EditProfileModular extends Component {
 			this.setState({
 				isLoading: false
 			});
-			// Redirect back to UserProfile
-			this.props.history.goBack();
+			// Redirect back to Homepage
+			this.props.history.push("/");
 		// Catch errors
 		}).catch(()=>{
 			return;
