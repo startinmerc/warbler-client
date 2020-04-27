@@ -9,7 +9,7 @@ const LandingPage = () => (
 	<div className="home-hero d-flex flex-column justify-content-around align-items-center">
 		<div className="hero-title text-center">
 			<Icon size="80%" classes="icon--hero" triangle/>
-			<h4>Welcome to</h4>
+			<h4 className="mb-5 mb-md-2">Welcome to</h4>
 			<h1>Warbler</h1>
 		</div>
 		<div className="container d-flex flex-column align-items-center mt-5">

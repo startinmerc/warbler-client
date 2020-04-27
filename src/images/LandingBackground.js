@@ -20,7 +20,6 @@ const LandingBackground = ({stroke})=>(
 		<line className="v v-5" x1="0%" y1="73%" x2="100%" y2="73%" stroke={stroke}/>
 		<line className="v v-6" x1="0%" y1="81%" x2="100%" y2="81%" stroke={stroke}/>
 		<line className="v v-7" x1="0%" y1="90%" x2="100%" y2="90%" stroke={stroke}/>
-		<line className="v v-8" x1="0%" y1="100%" x2="100%" y2="100%" stroke={stroke}/>
 		
 		<line x1="-120%" y1="100%" x2="07%" y2="51%" stroke={stroke}/>
 		<line x1="-100%" y1="100%" x2="12%" y2="51%" stroke={stroke}/>
