@@ -44,6 +44,27 @@ class Authform extends Component {
 		});
 	};
 
+	handleDummy = (e,user) => {
+		// Prevent page refresh
+		e.preventDefault();
+		// Show loader
+		this.setState({
+			isLoading: true
+		});
+		// Dispatch API call using dummy login info
+		this.props.onAuth("signin", {email: `${user}@${user}.${user}`,password: user}).then(()=>{
+			// Hide loader
+			this.setState({
+				isLoading: false
+			});
+			// Redirect to homepage
+			this.props.history.push("/");
+		// Catch errors
+		}).catch(()=>{
+			return;
+		});
+	};
+
 	render(){
 		// Deconstruct input fields from state
 		const { email, username, password, profileImageUrl } = this.state;
@@ -82,6 +103,17 @@ class Authform extends Component {
 								 />
 							</div>
 						 </div>
+						{!signUp && (
+							<div>
+								<p>Dummy logins:</p>
+								<button className="btn btn-outline-success mx-3" onClick={(e)=>this.handleDummy(e,"e")}>
+									User e@e.e
+								</button>
+								<button className="btn btn-outline-success mx-3" onClick={(e)=>this.handleDummy(e,"a")}>
+									User a@a.a
+								</button>
+							</div>
+						)}
 						{/* Show extra fields for signup form */}
 						{signUp && (
 							<>
