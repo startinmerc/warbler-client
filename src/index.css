@@ -39,6 +39,11 @@ a:not(.btn):hover {
 
 .white-border {
 	border: 2px solid var(--white);
+	border-radius: 0 !important;
+}
+
+.form-control, .input-group-text, .btn {
+	border-radius: 0;
 }
 
 /*================Navbar Styling================*/
