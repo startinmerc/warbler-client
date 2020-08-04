@@ -13,7 +13,7 @@ const LandingPage = () => (
 			<h1>Warbler</h1>
 		</div>
 		<div className="container d-flex flex-column align-items-center mt-5">
-			<p>New around here?</p>
+			<p className="mt-5">New around here?</p>
 			<Link to="/signup" className="btn btn-success">
 				Sign up!
 			</Link>
