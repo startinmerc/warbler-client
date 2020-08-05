@@ -3,7 +3,7 @@ import Icon from "../images/Icon";
 import { Link } from "react-router-dom";
 
 const UserCard = ({profileImageUrl, username, userID, userBio, showForm}) => (
-	<div className="col-12 col-sm-3 col-md-2 mb-3">
+	<div className="col-12 col-sm-3 col-md-2 mb-0 pr-md-0">
 		<div className="card user-card white-border">
 		{/* Show profile image, icon as fallback */}
 		{profileImageUrl ? (
