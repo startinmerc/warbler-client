@@ -307,6 +307,16 @@ Version logs for the entire project are below...
 * Move components around to make more sense
 * Refactor LandingPage & Adspace
 
+### Vwhatever
+
+#### Gridify
+* Remove padding from columns to get snug
+* Remove ALL border-radiuses
+* Define heights for elements
+* Restrict message list size & scroll
+
+#### This may as well not be bootstrapped anymore...
+
 ---
 
 ### To Do:
@@ -320,3 +330,4 @@ Version logs for the entire project are below...
 * Redo UserProfile routing to username not id
 * Catch 404s!
 * checkcurrentuser in editprofile
+* Convert Bootstrap to Tailwind
