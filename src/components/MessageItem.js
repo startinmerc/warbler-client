@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Icon from "../images/Icon";
 
 const MessageItem = ({createdAt, updatedAt, profileImageUrl, text, username, removeMessage, isCorrectUser, userId, msgId}) => (
-	<li className="list-group-item message-item p-0 white-border">
+	<li className="list-group-item message-item p-0">
 		{/* profile image or backup icon */}
 		{profileImageUrl ? (
 			<img src={profileImageUrl}

@@ -195,6 +195,12 @@ form h2 {
 	min-height: 120px;
 	transition: background-color 120ms ease-in;
 	overflow: hidden;
+	border: none;
+	border-bottom: 2px solid var(--white);
+}
+
+.message-item:last-child {
+	border-bottom: none;
 }
 
 .message-item:nth-of-type(even){
