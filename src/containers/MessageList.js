@@ -38,7 +38,8 @@ class MessageList extends Component {
 			));
 		return (
 			<div className={fromUser ? "mt-0 px-0" : "col-12 col-sm-9 col-md-8 px-md-0"}>
-				<ul className="list-group" id="messages">
+				<ul className={`list-group white-border ${fromUser && "border-top-0"}`}
+				 id="messages" style={fromUser && {height:"calc(80vh - 136px)"}}>
 					{messageList}
 				</ul>
 			</div>
