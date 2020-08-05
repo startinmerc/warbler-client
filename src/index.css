@@ -310,6 +310,14 @@ form h2 {
 	.icon--hero {
 		top: 5%;
 	}
+	.user-card {
+		height: auto;
+		border-right: 2px solid var(--white);
+		border-bottom: none;
+	}
+	#messages {
+		height: auto;
+	}
 	.btn-container {
 		position: relative;
 		opacity: 1;
