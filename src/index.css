@@ -186,6 +186,13 @@ form h2 {
 	100% {opacity: 1;}
 }
 
+/*===================Messages===================*/
+
+#messages {
+	height: 80vh;
+	overflow-y: scroll;
+}
+
 /*=================MessageItem=================*/
 
 .message-item {
