@@ -194,6 +194,7 @@ form h2 {
 	background-color: rgba(255,255,255,0.1);
 	min-height: 120px;
 	transition: background-color 120ms ease-in;
+	overflow: hidden;
 }
 
 .message-item:nth-of-type(even){
@@ -212,9 +213,11 @@ form h2 {
 .btn-container {
 	opacity: 0;
 	transition: opacity 120ms ease-in;
+	transition: transform 120ms ease-in;
 	right: 0;
 	position: absolute;
 	top: 0;
+	transform: translateX(100%);
 }
 
 .message-item:hover,
@@ -225,6 +228,7 @@ form h2 {
 .message-item:hover .btn-container,
 .message-item:focus-within .btn-container {
 	opacity: 1;
+	transform: translateX(0%);
 }
 
 /*==================User Card==================*/
