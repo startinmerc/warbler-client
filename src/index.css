@@ -256,6 +256,11 @@ form h2 {
 	background-color: rgba(0,0,0,0.1);
 }
 
+.disclaimer {
+	border-top: none;
+	border-right: none;
+}
+
 /*===================AdSpace===================*/
 
 .adspace {

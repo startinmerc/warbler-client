@@ -24,6 +24,12 @@ const UserCard = ({profileImageUrl, username, userID, userBio, showForm}) => (
 			</Link>
 			</div>
 		</div>
+		<div className="white-border p-2 text-center disclaimer d-none d-md-block" style={{height:"50%",backgroundColor:"var(--vw-blue)"}}>
+			Warbler is a product of Strange Industries.
+			<p className="font-weight-light mt-1" style={{fontSize:"0.6rem"}}>
+				The story, all names, characters, and incidents portrayed in this production are fictitious. No identification with actual persons (living or deceased), places, buildings, and products is intended or should be inferred.
+			</p>
+		</div>
 	</div>
 );
 
