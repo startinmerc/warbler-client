@@ -42,7 +42,7 @@ a:not(.btn):hover {
 	border-radius: 0 !important;
 }
 
-.form-control, .input-group-text, .btn {
+.form-control, .input-group-text, .btn, .navbar-toggler {
 	border-radius: 0;
 }
 
