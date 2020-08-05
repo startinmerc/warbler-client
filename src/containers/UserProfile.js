@@ -37,7 +37,7 @@ class UserProfile extends Component {
 
 		return (
 			<div className="row">
-				<div className="col-12 col-md-10">
+				<div className="col-12 col-md-10 px-0">
 					<UserProfileHeader isCorrectUser={isCorrectUser} user={this.state.user} url={`${id}/edit/`}/>
 					<MessageList fromUser="true" user={id} />
 				</div>
